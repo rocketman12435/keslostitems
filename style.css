@@ -1,6 +1,11 @@
- body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+body {
         background-image: url('Background gif.gif');
         background-size: 3000px 4600px;
         font-family: 'Franklin Gothic';
         font-size: 20px;
     }
+#title {
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+}
