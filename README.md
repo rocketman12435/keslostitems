@@ -1,0 +1,1 @@
+A website that allows people to check lost items online, and then press a claim button to request the item. This item request will go to the administrators, and then the request can be approved and the item can be sent to the person.
