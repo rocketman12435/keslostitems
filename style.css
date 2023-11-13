@@ -1,5 +1,6 @@
 @media (prefers-color-scheme: dark) {
     body {
+        color: white;
         background-size: 100%;
         font-family: 'Franklin Gothic';
         background: rgb(50,48,96);
@@ -14,6 +15,7 @@
 
 @media (prefers-color-scheme: light) {
     body {
+        color: black;
         background: rgb(197,194,255);
         background: -moz-linear-gradient(270deg, rgba(197,194,255,1) 0%, rgba(255,255,255,1) 100%);
         background: -webkit-linear-gradient(270deg, rgba(197,194,255,1) 0%, rgba(255,255,255,1) 100%);
@@ -23,5 +25,11 @@
         font-family: 'Franklin Gothic';
         background-size: cover;
         font-size: 20px;
+
     }
+}
+
+
+.subhead{
+    color:coral
 }
