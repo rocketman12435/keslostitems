@@ -56,9 +56,14 @@
         <!--complete list of meta tags at - https://gist.github.com/lancejpollard/1978404 -->
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <button onclick="myFunction()">Toggle dark mode</button>
+
+        <script>
+            function myFunction() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+            }
+        </script>
          <h1><em>Have you lost something?</em></h1>
          <h2 class="subhead">Let's try to find it!</h2>
         <link rel="stylesheet" type="text/css" href="./style.css" media="print" />
