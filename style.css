@@ -1,7 +1,25 @@
- body {
-        background-image: url('./homepage.gif');
-        background-size: 3000px 4600px;
-        background-color: 'sandybrown';
+@media (prefers-color-scheme: dark) {
+    body {
+        background-size: 100%;
+        font-family: 'Franklin Gothic';
+        background: rgb(50,48,96);
+        background: -moz-linear-gradient(45deg, rgba(50,48,96,1) 0%, rgba(0,0,0,1) 100%);
+        background: -webkit-linear-gradient(45deg, rgba(50,48,96,1) 0%, rgba(0,0,0,1) 100%);
+        background: linear-gradient(45deg, rgba(50,48,96,1) 0%, rgba(0,0,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#323060",endColorstr="#000000",GradientType=1);
+        font-size: 20px;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: rgb(197,194,255);
+        background: -moz-linear-gradient(45deg, rgba(197,194,255,1) 0%, rgba(255,255,255,1) 100%);
+        background: -webkit-linear-gradient(45deg, rgba(197,194,255,1) 0%, rgba(255,255,255,1) 100%);
+        background: linear-gradient(45deg, rgba(197,194,255,1) 0%, rgba(255,255,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c5c2ff",endColorstr="#ffffff",GradientType=1);
+        background-size: 100%;
         font-family: 'Franklin Gothic';
         font-size: 20px;
     }
+}
