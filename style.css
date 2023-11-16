@@ -13,7 +13,7 @@
         }
 }
 
-.light-mode {
+function light-mode() {
     @media (prefers-color-scheme: light) {
         body {
             color: black;
