@@ -98,6 +98,16 @@
         <button onclick="lightOrdarkmode()" ; style = "background-color:tomato;" ; class = "button button3">Change theme</button>
 
         <script>
+            var i = 0;
+            var txt = 'Have you lost something';
+            var speed = 60;
+
+
+            if (i < txt.length) {
+                    document.getElementById("demo").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+          }
             function lightOrdarkmode() {
                var element = document.body;
                element.classList.toggle("lightmode");
