@@ -67,7 +67,7 @@
         }
         }
 
-        .light-mode {
+        .lightmode {
             @media (prefers-color-scheme: light) {
                 body {
                     color: black;
@@ -95,12 +95,12 @@
     </style>
     <body>
         <div class="sticky" ; style = "color:black;">keslostitems</div>
-        <button onclick="mode()" ; style = "background-color:tomato;">Change theme</button>
+        <button onclick="lightOrdarkmode()" ; style = "background-color:tomato;" ; class = "button button3">Change theme</button>
 
         <script>
-            function mode() {
+            function lightOrdarkmode() {
                var element = document.body;
-               element.classList.toggle("light-mode");
+               element.classList.toggle("lightmode");
             }
         </script>
          <h1><em>Have you lost something?</em></h1>
