@@ -13,7 +13,7 @@
         }
 }
 
- lightmode {
+ .lightmode {
     @media (prefers-color-scheme: light) {
         body {
             color: black;
@@ -31,6 +31,6 @@
     }
 }
 
-subhead{
+.subhead{
     color:coral
 }
