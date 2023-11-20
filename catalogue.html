@@ -1,132 +1,160 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <link rel="icon" href="FaviconHomepage.ico">
-   <link rel="stylesheet" type="text/css" href="./style.css" media="print" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="FaviconHomepage.ico">
+    <link rel="stylesheet" type="text/css" href="./style.css" media="print" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-   #navbar {
-  overflow: hidden;
-  background-color: #333;
-   }
+    <style>
+        body {
+            padding: 25px;
+            background-color: lightgreen;
+            color: black;
+            font-size: 25px;
+        }
 
-   #navbar a {
-     float: left;
-     display: block;
-     color: #f2f2f2;
-     text-align: center;
-     padding: 14px 16px;
-     text-decoration: none;
-     font-size: 17px;
-   }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
 
-   #navbar a:hover {
-     background-color: #ddd;
-     color: black;
-   }
 
-   #navbar a.active {
-     background-color: #04AA6D;
-     color: white;
-   }
 
-   .content {
-     padding: 16px;
-   }
+        #navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
 
-   .sticky {
-     position: fixed;
-     top: 0;
-     width: 100%;
-   }
-   
-   .sticky + .content {
-     padding-top: 60px;
-   }
-table {
-  border-collapse:collapse;
-  border-spacing: 0;
-  width: 60%;
-  border: 5px solid lightgreen;
-}
+            #navbar a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
 
-th, td {
-  text-align: left;
-  padding: 16px;
-}
+                #navbar a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-</style>
+                #navbar a.active {
+                    background-color: #04AA6D;
+                    color: white;
+                }
+
+        .content {
+            padding: 16px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+            .sticky + .content {
+                padding-top: 60px;
+            }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 60%;
+            border: 5px solid cornflowerblue;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 16px;
+        }
+
+        th {
+            text-shadow:10px, 10px;
+            font-size: 60px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body background-color>
-   <div id="navbar">
+    <div id="navbar">
         <a class="active" href="index.html">Home</a>
-   </div>
+        <a onclick="myFunction()">Change theme</a>
+
+    </div>
 
 
-<h1><em>This is the lost items catalogue</em></h1>
-<h2 class = "subhead" ; style = "color:coral">Have a search through and see if your lost item is on it!</h2>
+    <h1><em>This is the lost items catalogue</em></h1>
+    <h2 class="subhead" ; style="color:coral">Have a search through and see if your lost item is on it!</h2>
 
-<div style="overflow-x:auto;">
-  <table style = "color:black">
-    <tr>
-      <th>Item name</th>
-      <th>Category</th>
-    </tr>
-    <tr>
-      <td>Lord of the Rings</td>
-      <td>Book</td>
-    </tr>
-    <tr>
-      <td>Size 7 leather shoes</td>
-      <td>Shoes</td>
+    <div style="overflow-x:auto;">
+        <table style="color:blueviolet">
+            <tr>
+                <th style="color:blue">Item name</th>
+                <th style="color:blue">Category</th>
+            </tr>
+            <tr>
+                <td>Lord of the Rings</td>
+                <td>Book</td>
+            </tr>
+            <tr>
+                <td>Size 7 leather shoes</td>
+                <td>Shoes</td>
 
-    </tr>
-    <tr>
-      <td>Grey pencil case</td>
-      <td>Stationery</td>
+            </tr>
+            <tr>
+                <td>Grey pencil case</td>
+                <td>Stationery</td>
 
-    </tr>
-    <tr>
-      <td>KES Rugby Jersey</td>
-      <td>Sports clothing</td>
+            </tr>
+            <tr>
+                <td>KES Rugby Jersey</td>
+                <td>Sports clothing</td>
 
-    </tr>
-    <tr>
-      <td>White long-sleeved shirt</td>
-      <td>School clothing</td>
+            </tr>
+            <tr>
+                <td>White long-sleeved shirt</td>
+                <td>School clothing</td>
 
-    </tr>
-    <tr>
-      <td>Cricket pad</td>
-      <td>Sports kits</td>
+            </tr>
+            <tr>
+                <td>Cricket pad</td>
+                <td>Sports kits</td>
 
-    </tr>
-    <tr>
-      <td>Science goggles</td>
-      <td>Lesson equipment</td>
+            </tr>
+            <tr>
+                <td>Science goggles</td>
+                <td>Lesson equipment</td>
 
-    </tr>
+            </tr>
 
-  </table>
-</div>
-<script>
-   window.onscroll = function() {myFunction()};
+        </table>
+    </div>
+    <script>
+       window.onscroll = function() {myFunction()};
 
-   var navbar = document.getElementById("navbar");
-   var sticky = navbar.offsetTop;
+       var navbar = document.getElementById("navbar");
+       var sticky = navbar.offsetTop;
 
-   function myFunction() {
-     if (window.pageYOffset >= sticky) {
-       navbar.classList.add("sticky")
-     }    
-     else {
-    navbar.classList.remove("sticky");
-     }
-   }
-</script>
+       function myFunction() {
+         if (window.pageYOffset >= sticky) {
+           navbar.classList.add("sticky")
+         }
+         else {
+        navbar.classList.remove("sticky");
+         }
+       }
+
+
+       function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+}
+    </script>
 </body>
 </html>
