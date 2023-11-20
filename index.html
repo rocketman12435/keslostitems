@@ -52,61 +52,7 @@
         <link rel="icon" href="FaviconHomepage.ico">
     </head>
     <style>
-        table {
-          border-collapse:collapse;
-          border-spacing: 0;
-          width: 60%;
-          border: 5px solid lightgreen;
-        }
-
-        th, td {
-          text-align: left;
-          padding: 16px;
-        }
-
-        tr:nth-child(even) {
-          background-color: #f2f2f2;
-        }
-        @media (prefers-color-scheme: dark) {
-        body {
-            color: white;
-            background-size: 100%;
-            font-family: 'Franklin Gothic';
-            background: rgb(50,48,96);
-            background: -moz-linear-gradient(90deg, rgba(50,48,96,1) 0%, rgba(0,0,0,1) 100%);
-            background: -webkit-linear-gradient(90deg, rgba(50,48,96,1) 0%, rgba(0,0,0,1) 100%);
-            background: linear-gradient(90deg, rgba(50,48,96,1) 0%, rgba(0,0,0,1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#323060",endColorstr="#000000",GradientType=1);
-            background-size: cover;
-            font-size: 20px;
-        }
-        }
-
-        .lightmode {
-            @media (prefers-color-scheme: light) {
-                body {
-                    color: black;
-                    background: rgb(197,194,255);
-                    background: -moz-linear-gradient(270deg, rgba(197,194,255,1) 0%, rgba(255,255,255,1) 100%);
-                    background: -webkit-linear-gradient(270deg, rgba(197,194,255,1) 0%, rgba(255,255,255,1) 100%);
-                    background: linear-gradient(270deg, rgba(197,194,255,1) 0%, rgba(255,255,255,1) 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c5c2ff",endColorstr="#ffffff",GradientType=1);
-                    background-size: 100%;
-                    font-family: 'Franklin Gothic';
-                    background-size: cover;
-                    font-size: 20px;
-            
-                }
-            }
-        }
-       
-        div.sticky {
-            position: -webkit-sticky;
-          position: sticky;
-          top: 0;
-          padding: 5px;
-          background-color: #cae8ca;
-          border: 2px solid #4CAF50;
+    
     </style>
     <body>
         <div class="sticky" ; style = "color:black;">keslostitems <a href = 'catalogue.html'>        Go to the catalogue</a></div>
@@ -116,7 +62,7 @@
 
             function lightOrdarkmode() {
                var element = document.body;
-               element.classList.toggle("lightmode");
+               element.classList.toggle("darkmode");
             }
         </script>
          <h1><em>Have you lost something?</em></h1>
