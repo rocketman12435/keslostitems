@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Catalogue</title>
     <link rel="icon" href="FaviconHomepage.ico">
     <link rel="stylesheet" type="text/css" href="./style.css" media="print" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
+        .button {
+            background-color: #04AA6D; /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 23px;
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid cornflowerblue;
+        }
+
+        .button1:hover {
+                background-color: cornflowerblue;
+                color: white;
+            }
         body {
             padding: 25px;
             background-color: lightgreen;
@@ -84,7 +110,8 @@
 <body background-color>
     <div id="navbar">
         <a class="active" href="index.html">Home</a>
-        <a onclick="myFunction()">Change theme</a>
+        <a onclick="theme()">Change theme</a>
+        <a>Claimed items</a>
 
     </div>
 
@@ -101,60 +128,100 @@
             <tr>
                 <td>Lord of the Rings</td>
                 <td>Book</td>
+                <td> <button class="button button1" id="Lord of the Rings" onClick="GFG_click(this.id)">Claim item</button></td>
             </tr>
             <tr>
                 <td>Size 7 leather shoes</td>
                 <td>Shoes</td>
-
+                <td> <button class="button button1" id="Size 7 leather shoes" onClick="GFG_click(this.id)">Claim item</button></td>
             </tr>
             <tr>
                 <td>Grey pencil case</td>
                 <td>Stationery</td>
-
+                <td> <button class="button button1" id="Grey pencil case" onClick="GFG_click(this.id)">Claim item</button></td>
             </tr>
             <tr>
                 <td>KES Rugby Jersey</td>
                 <td>Sports clothing</td>
-
+                <td> <button class="button button1" id="KES Rugby Jersey" onClick="GFG_click(this.id)">Claim item</button></td>
             </tr>
             <tr>
                 <td>White long-sleeved shirt</td>
                 <td>School clothing</td>
-
+                <td> <button class="button button1" id="White long-sleeved shirt" onClick="GFG_click(this.id)">Claim item</button></td>
             </tr>
             <tr>
                 <td>Cricket pad</td>
                 <td>Sports kits</td>
-
+                <td> <button class="button button1" id="Cricket pad" onClick="GFG_click(this.id)">Claim item</button></td>
             </tr>
             <tr>
                 <td>Science goggles</td>
                 <td>Lesson equipment</td>
-
+                <td> <button class="button button1" id="Science goggles" onClick="GFG_click(this.id)">Claim item</button></td>
             </tr>
 
+
+
         </table>
+
+        <p id="GFG_UP" style="font-size: 15px;
+                          font-weight: bold;">
+        </p>
+
+
+        <p id="GFG_DOWN" style="color:green;
+                            font-size: 20px;
+                            font-weight: bold;">
+        </p>
     </div>
+
+    <table id="items" style="color:blueviolet;">
+        <tr>
+            <th style="color:blue;">Items claimed</th>
+        </tr>
+    </table>
     <script>
-       window.onscroll = function() {myFunction()};
+        window.onscroll = function () { myFunction() };
 
-       var navbar = document.getElementById("navbar");
-       var sticky = navbar.offsetTop;
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
 
-       function myFunction() {
-         if (window.pageYOffset >= sticky) {
-           navbar.classList.add("sticky")
-         }
-         else {
-        navbar.classList.remove("sticky");
-         }
-       }
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            }
+            else {
+                navbar.classList.remove("sticky");
+            }
+        }
 
 
-       function myFunction() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-}
+        function theme() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+
+        }
+
+     
+        
+
+
+        
+
+
+        var el_up = document.getElementById("GFG_UP");
+        var el_down = document.getElementById("GFG_DOWN");
+
+        function GFG_click(clicked) {
+            var table = document.getElementById("items");
+            var row = table.insertRow(1);
+            var cell1 = row.insertCell(0);
+
+            cell1.innerHTML = clicked;
+
+        }
+
     </script>
 </body>
 </html>
