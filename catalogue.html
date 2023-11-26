@@ -107,22 +107,31 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+        input {
+            border-radius:30px;
+            width:100%;
+            height:70px;
+            font-size:30px;
+            background-color:lightcyan;
+            font-family:'Franklin Gothic'
+
+        }
     </style>
 </head>
 <body background-color>
     <div id="navbar">
         <a class="active" href="index.html">Home</a>
         <a onclick="theme()">Change theme</a>
-        <a>Claimed items</a>
 
     </div>
 
 
     <h1><em>This is the lost items catalogue</em></h1>
     <h2 class="subhead" style="color:dodgerblue">Have a search through and see if your lost item is on it!</h2>
-
+    <input placeholder="Search for an item..." id="myInput" onkeyup="searchbar()"/>
+    <p> </p>
     <div style="overflow-x:auto;">
-        <table style="color:blueviolet">
+        <table style="color:blueviolet" id="myTable">
             <tr>
                 <th style="color:blue">Item name</th>
                 <th style="color:blue">Category</th>
@@ -132,6 +141,7 @@
                 <td>Book</td>
                 <td> <button class="button button1" id="Lord of the Rings" onClick="GFG_click(this.id)">Claim item</button></td>
             </tr>
+
             <tr>
                 <td>Size 7 leather shoes</td>
                 <td>Shoes</td>
@@ -222,6 +232,25 @@
 
             cell1.innerHTML = clicked;
 
+        }
+
+        function searchbar() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
         }
 
     </script>
