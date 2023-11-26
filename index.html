@@ -93,6 +93,13 @@
             .sticky + .content {
                 padding-top: 60px;
             }
+            img {
+                width:567px;
+                height:192px;
+            }
+            p1{
+                font-size:40px
+            }
     </style>
 </head>
 
@@ -104,29 +111,30 @@
     </div>
 
     <script>
-function lightOrdarkmode() {
+        function lightOrdarkmode() {
             var element = document.body;
             element.classList.toggle("darkmode");
-}</script>
+        }</script>
     <h1><em>Have you lost something?</em></h1>
     <h2 class="subhead" style="color:dodgerblue">Let's try to find it!</h2>
     <h3>Keslostitems is the simple, easy to use lost property website that allows you to find your items without the hassle!</h3>
+    <img src="img1.jpg" alt="Search for items and claim them with the click of a button!"> <p1>Search for items and claim them with the click of a button!</p1>
     <link rel="stylesheet" type="text/css" href="./style.css" media="print" />
     <script src="" async defer></script>
     <script>
-window.onscroll = function () { myFunction() };
+        window.onscroll = function () { myFunction() };
 
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
 
-function myFunction() {
+        function myFunction() {
             if (window.pageYOffset >= sticky) {
                 navbar.classList.add("sticky")
             }
             else {
                 navbar.classList.remove("sticky");
             }
-}
+        }
     </script>
 </body>
 </html>
