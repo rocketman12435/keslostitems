@@ -1,19 +1,12 @@
 
     /* @media (prefers-color-scheme: dark) {
         */
-body {
-    color: white;
-    background-size: 100%;
-    font-family: 'Franklin Gothic';
-    background: rgb(50,48,96);
-    background: -moz-linear-gradient(90deg, rgba(50,48,96,1) 0%, rgba(0,0,0,1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(50,48,96,1) 0%, rgba(0,0,0,1) 100%);
-    background: linear-gradient(90deg, rgba(50,48,96,1) 0%, rgba(0,0,0,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#323060",endColorstr="#000000",GradientType=1);
-    font-size: 20px;
-    background-repeat: no-repeat;
-    background-size: auto;
+
+div {
+  background: #466368;
+  background: linear-gradient(to right bottom, #648880, #293f50);
 }
+
 
 
 .subhead {
