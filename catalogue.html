@@ -8,29 +8,19 @@
     <link rel="icon" href="faviconnobg.ico">
 
     <style>
+	}
         .cell {
-            background-color: #04AA6D; /* Green */
-            border: none;
-            color: white;
-            padding: 16px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            transition-duration: 0.4s;
-            cursor: pointer;
-            border-radius: 23px;
+            
+            transition-duration:0.4s;
         }
 
         .cell1 {
-            background-color: white;
-            color: black;
-            border: 2px solid cornflowerblue;                                                                                                                                                                                                                                                                  
+            border: 2px solid forestgreen;                                                                                                                                                                                                                                                                  
         }
 
             .cell1:hover {
-                background-color: cornflowerblue;
+		transition-duration:0.4s;
+                background-color: forestgreen;
                 color: white;
             }
 
@@ -51,6 +41,7 @@
         #navbar {
             overflow: hidden;
             background-color: #333;
+	    transition-duration:0.4s;
         }
 
             #navbar a {
@@ -131,46 +122,46 @@
     <input placeholder="Search for an item..." id="myInput" onkeyup="searchbar()"/>
     <p> </p>
     <div style="overflow-x:auto;">
-        <table style="color:blueviolet" id="myTable">
+        <table style="color:blueviolet" ; font-family:Franklin Gothic id="myTable">
             <tr>
                 <th style="color:blue">Item name</th>
                 <th style="color:blue">Category</th>
             </tr>
-            <tr class="cell cel1" id="Lord of the Rings" onClick="GFG_click(this.id)">
+            <tr class="cell cell1" id="Lord of the Rings" onClick="GFG_click(this.id)">
                 <td>Lord of the Rings</td>
                 <td>Book</td>
-                <td> <button>Claim item</button></td>
+                
             </tr>
 
             <tr class="cell cell1" id="Size 7 leather shoes" onClick="GFG_click(this.id)">
                 <td>Size 7 leather shoes</td>
                 <td>Shoes</td>
-                <td> <button>Claim item</button></td>
+                
             </tr>
             <tr class="cell cell1" id="Grey pencil case" onClick="GFG_click(this.id)">
                 <td>Grey pencil case</td>
                 <td>Stationery</td>
-                <td> <button>Claim item</button></td>
+                
             </tr>
             <tr class="cell cell1" id="KES Rugby Jersey" onClick="GFG_click(this.id)">
                 <td>KES Rugby Jersey</td>
                 <td>Sports clothing</td>
-                <td> <button>Claim item</button></td>
+                
             </tr>
             <tr class="cell cell1" id="White long-sleeved shirt" onClick="GFG_click(this.id)">
                 <td>White long-sleeved shirt</td>
                 <td>School clothing</td>
-                <td> <button>Claim item</button></td>
+                
             </tr>
             <tr class="cell cell1" id="Cricket pad" onClick="GFG_click(this.id)">
                 <td>Cricket pad</td>
                 <td>Sports kits</td>
-                <td> <button>Claim item</button></td>
+                
             </tr>
             <tr class="cell cell1" id="Science goggles" onClick="GFG_click(this.id)">
                 <td>Science goggles</td>
                 <td>Lesson equipment</td>
-                <td> <button>Claim item</button></td>
+                
             </tr>
 
 
@@ -226,6 +217,8 @@
         var el_down = document.getElementById("GFG_DOWN");
 
         function GFG_click(clicked) {
+	    var x = document.getElementById(clicked)
+	    x.style.display = "none";
             var table = document.getElementById("items");
             var row = table.insertRow(1);
             var cell1 = row.insertCell(0);
