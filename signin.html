@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+        
+        input {
+            border: none;
+        }
+
+        body {
+            font-family:'Franklin Gothic';
+        }
+        button {
+            transition-duration: 0.4s;
+            border-radius: 23px;
+            text-shadow: 1px 1px blueviolet;
+            font-size: 20px;
+            background-color: white;
+            border-color: cornflowerblue;
+        }
+
+        button:hover {
+           
+            background-color:cornflowerblue;
+        }
+
+        input[type=text] {
+            width: 60%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid #ccc;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            outline: none;
+        }
+
+        input[type=password] {
+            width: 60%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid #ccc;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            outline: none;
+        }
+        input[type=text]:focus {
+
+            transition-duration:0.5s;
+            border: 7px solid cornflowerblue;
+        }
+
+        input[type=password]:focus {
+
+            transition-duration: 0.5s;
+            border: 7px solid forestgreen;
+        }
+        showpd {
+            transition-duration:0.5s;
+            border-color:blueviolet;
+        }
+        showpd:hover{
+            border:2px solid blueviolet;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('signinbg.jpg');">
+    <h1 style="color:white;"><em>Sign in:</em></h1>
+    <input type="text" placeholder="School username" />
+    <br />
+    <br />
+    <input id="pd" type="password" placeholder="School password" />
+    <br />
+    <input id =" showpd" type="checkbox" onclick="show()">Show Password
+    <br />
+    <br />
+
+    <form action="dashboard.html">
+        <button href="dashboard.html"><b>Sign in</b></button>
+    </form>
+    <script>
+
+        function show() {
+            var x = document.getElementById("pd");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>
