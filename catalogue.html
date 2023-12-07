@@ -8,18 +8,17 @@
     <link rel="icon" href="faviconnobg.ico">
 
     <style>
-	}
+
         .cell {
-            
-            transition-duration:0.4s;
+            transition-duration: 0.4s;
         }
 
         .cell1 {
-            border: 2px solid forestgreen;                                                                                                                                                                                                                                                                  
+            border: 2px solid forestgreen;
         }
 
             .cell1:hover {
-		transition-duration:0.4s;
+                transition-duration: 0.4s;
                 background-color: forestgreen;
                 color: white;
             }
@@ -41,10 +40,12 @@
         #navbar {
             overflow: hidden;
             background-color: #333;
-	    transition-duration:0.4s;
+            transition-duration: 0.4s;
+            font-family:'Franklin Gothic';
         }
 
             #navbar a {
+                transition-duration:0.4s;
                 float: left;
                 display: block;
                 color: #f2f2f2;
@@ -55,6 +56,7 @@
             }
 
                 #navbar a:hover {
+                    transition-duration: 0.4s;
                     background-color: #ddd;
                     color: black;
                 }
@@ -69,43 +71,56 @@
         }
 
         .sticky {
+            transition-duration: 0.4s;
             position: fixed;
             top: 0;
             width: 100%;
         }
 
             .sticky + .content {
+                transition-duration: 0.4s;
                 padding-top: 60px;
             }
 
         table {
+            border:2px;
             border-collapse: collapse;
             border-spacing: 0;
-            width: 60%;
+            width:48%;
             border: 5px solid cornflowerblue;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left:20px;
+            padding-right:20px;
+            
         }
 
         th, td {
-            text-align: left;
+            text-align: center;
             padding: 16px;
+            padding-left:10px;
+            padding-right:15px;
         }
 
         th {
-            text-shadow: 10px, 10px;
-            font-size: 60px;
+            text-shadow: 2px 2px blueviolet;
+            font-size: 40px;
+            text-align:center;
         }
 
         tr:nth-child(even) {
+            transition-duration:1.5s;
             background-color: #f2f2f2;
         }
-        input {
-            border-radius:30px;
-            width:100%;
-            height:70px;
-            font-size:30px;
-            background-color:lightcyan;
-            font-family:'Franklin Gothic'
 
+        input {
+            border-radius: 30px;
+            width: 100%;
+            height: 70px;
+            font-size: 30px;
+            background-color: lightcyan;
+            font-family: 'Franklin Gothic'
         }
     </style>
 </head>
@@ -117,9 +132,9 @@
     </div>
 
 
-    <h1><em>This is the lost items catalogue</em></h1>
-    <h2 class="subhead" style="color:dodgerblue">Have a search through and see if your lost item is on it!</h2>
-    <input placeholder="Search for an item..." id="myInput" onkeyup="searchbar()"/>
+    <h1 style="text-align:center; text-shadow:3px 3px blueviolet;"><b><em>This is the lost items catalogue</em></b></h1>
+    <h2 style="text-align: center; color: forestgreen; text-shadow:1.5px 1.5px cornflowerblue" class="subhead">Have a search through and see if your lost item is on it!</h2>
+    <input placeholder="Search for an item..." id="myInput" onkeyup="searchbar()" />
     <p> </p>
     <div style="overflow-x:auto;">
         <table style="color:blueviolet" ; font-family:Franklin Gothic id="myTable">
@@ -130,38 +145,38 @@
             <tr class="cell cell1" id="Lord of the Rings" onClick="GFG_click(this.id)">
                 <td>Lord of the Rings</td>
                 <td>Book</td>
-                
+
             </tr>
 
             <tr class="cell cell1" id="Size 7 leather shoes" onClick="GFG_click(this.id)">
                 <td>Size 7 leather shoes</td>
                 <td>Shoes</td>
-                
+
             </tr>
             <tr class="cell cell1" id="Grey pencil case" onClick="GFG_click(this.id)">
                 <td>Grey pencil case</td>
                 <td>Stationery</td>
-                
+
             </tr>
             <tr class="cell cell1" id="KES Rugby Jersey" onClick="GFG_click(this.id)">
                 <td>KES Rugby Jersey</td>
                 <td>Sports clothing</td>
-                
+
             </tr>
             <tr class="cell cell1" id="White long-sleeved shirt" onClick="GFG_click(this.id)">
                 <td>White long-sleeved shirt</td>
                 <td>School clothing</td>
-                
+
             </tr>
             <tr class="cell cell1" id="Cricket pad" onClick="GFG_click(this.id)">
                 <td>Cricket pad</td>
                 <td>Sports kits</td>
-                
+
             </tr>
             <tr class="cell cell1" id="Science goggles" onClick="GFG_click(this.id)">
                 <td>Science goggles</td>
                 <td>Lesson equipment</td>
-                
+
             </tr>
 
 
@@ -206,23 +221,22 @@
 
         }
 
-     
-        
 
 
-        
+
+
+
 
 
         var el_up = document.getElementById("GFG_UP");
         var el_down = document.getElementById("GFG_DOWN");
 
         function GFG_click(clicked) {
-	    var x = document.getElementById(clicked)
-	    x.style.display = "none";
+            var x = document.getElementById(clicked)
+            x.style.display = "none";
             var table = document.getElementById("items");
             var row = table.insertRow(1);
             var cell1 = row.insertCell(0);
-            
             cell1.innerHTML = clicked;
 
         }
