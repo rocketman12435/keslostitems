@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,9 +6,17 @@
     <title></title>
 
     <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
         
         input {
             border: none;
+            align-content:center;
         }
 
         body {
@@ -29,7 +37,9 @@
         }
 
         input[type=text] {
-            width: 60%;
+            border-radius:23px;
+            width: 25%;
+            height:20%;
             padding: 12px 20px;
             margin: 8px 0;
             box-sizing: border-box;
@@ -40,7 +50,8 @@
         }
 
         input[type=password] {
-            width: 60%;
+            border-radius: 23px;
+            width: 25%;
             padding: 12px 20px;
             margin: 8px 0;
             box-sizing: border-box;
@@ -50,14 +61,16 @@
             outline: none;
         }
         input[type=text]:focus {
-
             transition-duration:0.5s;
+            width:30%;
+            height:50%;
             border: 7px solid cornflowerblue;
         }
 
         input[type=password]:focus {
-
             transition-duration: 0.5s;
+            width: 30%;
+            height: 50%;
             border: 7px solid forestgreen;
         }
         showpd {
@@ -73,12 +86,12 @@
 
 <body style="background-image: url('signinbg.jpg');">
     <h1 style="color:white;"><em>Sign in:</em></h1>
-    <input type="text" placeholder="School username" />
+    <input type="text" placeholder="School username" class="center" />
     <br />
     <br />
-    <input id="pd" type="password" placeholder="School password" />
+    <input id="pd" type="password" placeholder="School password" class="center" />
     <br />
-    <input id =" showpd" type="checkbox" onclick="show()" >Show Password
+    <p style="color:white;"><input id =" showpd" type="checkbox" onclick="show()"> Show password</p>
     <br />
     <br />
 
