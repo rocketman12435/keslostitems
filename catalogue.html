@@ -3,7 +3,7 @@
 <head>
     <title>Catalogue</title>
     <link rel="icon" href="FaviconHomepage.ico">
-    <link rel="stylesheet" type="text/css" href="./style.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="./style.css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="faviconnobg.ico">
 
@@ -24,14 +24,17 @@
             }
 
         body {
+            transition-duration: 0.5s;
             padding: 25px;
-            background-color: lightgreen;
+            background-color: lightskyblue;
             color: black;
             font-size: 25px;
+            text-align: center;
         }
 
         .dark-mode {
-            background-color: black;
+            transition-duration: 0.5s;
+            background-color: darkblue;
             color: white;
         }
 
@@ -41,11 +44,11 @@
             overflow: hidden;
             background-color: #333;
             transition-duration: 0.4s;
-            font-family:'Franklin Gothic';
+            font-family: 'Franklin Gothic';
         }
 
             #navbar a {
-                transition-duration:0.4s;
+                transition-duration: 0.4s;
                 float: left;
                 display: block;
                 color: #f2f2f2;
@@ -83,34 +86,34 @@
             }
 
         table {
-            border:2px;
+            transition-duration: 0.6s;
+            border: 2px;
             border-collapse: collapse;
             border-spacing: 0;
-            width:48%;
+            width: 45%;
             border: 5px solid cornflowerblue;
             display: block;
             margin-left: auto;
             margin-right: auto;
-            padding-left:20px;
-            padding-right:20px;
-            
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
         th, td {
             text-align: center;
             padding: 16px;
-            padding-left:10px;
-            padding-right:15px;
+            padding-left: 10px;
+            padding-right: 15px;
         }
 
         th {
             text-shadow: 2px 2px blueviolet;
             font-size: 40px;
-            text-align:center;
+            text-align: center;
         }
 
         tr:nth-child(even) {
-            transition-duration:1.5s;
+            transition-duration: 1.5s;
             background-color: #f2f2f2;
         }
 
@@ -122,18 +125,229 @@
             background-color: lightcyan;
             font-family: 'Franklin Gothic'
         }
+
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+            /* Full-width input fields */
+            .form-container input[type=text], .form-container input[type=password] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                border: none;
+                background: #f1f1f1;
+            }
+
+                /* When the inputs get focus, do something */
+                .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+                    background-color: #ddd;
+                    outline: none;
+                }
+
+            /* Set a style for the submit/login button */
+            .form-container .btn {
+                background-color: #04AA6D;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom: 10px;
+                opacity: 0.8;
+            }
+
+            /* Add a red background color to the cancel button */
+            .form-container .cancel {
+                background-color: red;
+            }
+
+            /* Add some hover effects to buttons */
+            .form-container .btn:hover, .open-button:hover {
+                opacity: 1;
+            }
     </style>
+
+    <script>
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            }
+            else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+
+        function theme() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+
+        }
+
+
+        var el_up = document.getElementById("GFG_UP");
+        var el_down = document.getElementById("GFG_DOWN");
+        let claimed = 0;
+
+        function GFG_click(clicked) {
+
+            var x = document.getElementById(clicked)
+            x.style.display = "none";
+            var table = document.getElementById("items");
+            var row = table.insertRow(1);
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = clicked;
+            claimed++;
+
+        }
+        function additems() {
+            //alert(document.getElementById('itemn').value);
+            //document.getElementById('myTable')
+
+         var row = myTable.insertRow(1);
+            row.id = document.getElementById('itemn').value;
+            //alert(row.id);
+           // row.classList.add("cell cell1");
+
+            var td1 = row.insertCell(0);
+            var td2 = row.insertCell(1);
+      
+            td1.innerHTML = document.getElementById('itemn').value;
+            td2.innerHTML = document.getElementById('itemc').value;
+            //row.onclick = GFG_click(document.getElementById('itemn').value);
+            //document.GetElementById('cell1').classList.add("cell cell1");
+            //ocument.getElementById('cell2').classList.add("cell cell1");
+            td1.id = document.getElementById('itemn').value;
+            td2.id = document.getElementById('itemc').value;
+           // document.getElementById(row.id).style.borderColor = "red";
+            //document.write(document.getElementById('cell2').id);
+
+
+            /*<tr class="cell cell1" id="Cricket pad" onClick="GFG_click(this.id)">
+                <td>Cricket pad</td>
+                <td>Sports kits</td>
+            </tr>*/
+
+        }
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        //alert("hello" + claimed);
+
+        setCookie('akshaj-bookcount', claimed, 1);
+
+        //alert('number of books'+getCookie('akshaj-bookcount'));
+
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+
+        }
+
+        function checkCookie() {
+            let num = getCookie("akshaj-bookcount");
+            if (num != "") {
+                //alert("You have claimed " + num+ " items");
+                document.getElementById('n');
+                n.innerHTML = num;
+            } else {
+                //username = prompt("Please enter your name:", "");
+                if (num != "" && username != null) {
+                    setCookie("akshaj-bookcount", username, 1);
+                }
+            }
+        }
+
+        function searchbar() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+    </script>
+
 </head>
-<body background-color>
+<body onload="checkCookie()">
     <div id="navbar">
-        <a class="active" href="index.html">Home</a>
+        <a class="active" href="index.html">Keslostitems</a>
+        <a href="about.html">About</a>
+        <a href="signin.html">Sign out</a>
         <a onclick="theme()">Change theme</a>
+        <a href="dashboard.html">Dashboard</a>
 
     </div>
 
 
-    <h1 style="text-align:center; text-shadow:3px 3px blueviolet;"><b><em>This is the lost items catalogue</em></b></h1>
-    <h2 style="text-align: center; color: forestgreen; text-shadow:1.5px 1.5px cornflowerblue" class="subhead">Have a search through and see if your lost item is on it!</h2>
+    <h1 style="text-align:center; text-shadow:3px 3px blueviolet; color:white;"><b><em>This is the lost items catalogue</em></b></h1>
+    <h2 class="subhead" style="color: blueviolet; text-align: center; text-shadow: 2px 2px coral;">Have a search through and see if your lost item is on it!</h2>
     <input placeholder="Search for an item..." id="myInput" onkeyup="searchbar()" />
     <p> </p>
     <div style="overflow-x:auto;">
@@ -171,7 +385,6 @@
             <tr class="cell cell1" id="Cricket pad" onClick="GFG_click(this.id)">
                 <td>Cricket pad</td>
                 <td>Sports kits</td>
-
             </tr>
             <tr class="cell cell1" id="Science goggles" onClick="GFG_click(this.id)">
                 <td>Science goggles</td>
@@ -179,9 +392,24 @@
 
             </tr>
 
-
-
         </table>
+        <button class="open-button" onclick="openForm()">Open Form</button>
+
+        <div class="form-popup" id="myForm">
+            <form action="additems()" class="form-container">
+                <h1>Add item</h1>
+
+                <input style="font-size:12px; width:270px;height:15px;" type="text" placeholder="Item name" name="email" id="itemn" required>
+
+
+                <input style="font-size: 12px; width: 270px; height: 15px;" type="text" placeholder="Item category" name="psw" id="itemc" required>
+
+                <button type="button" class="btn" onclick="additems()">Add item</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+
 
         <p id="GFG_UP" style="font-size: 15px;
                           font-weight: bold;">
@@ -194,72 +422,12 @@
         </p>
     </div>
 
-    <table id="items" style="color:blueviolet;">
+
+    <table id="items" style="color:blueviolet; width:20%;">
         <tr>
             <th style="color:blue;">Items claimed</th>
         </tr>
     </table>
-    <script>
-        window.onscroll = function () { myFunction() };
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            }
-            else {
-                navbar.classList.remove("sticky");
-            }
-        }
-
-
-        function theme() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-
-        }
-
-
-
-
-
-
-
-
-        var el_up = document.getElementById("GFG_UP");
-        var el_down = document.getElementById("GFG_DOWN");
-
-        function GFG_click(clicked) {
-            var x = document.getElementById(clicked)
-            x.style.display = "none";
-            var table = document.getElementById("items");
-            var row = table.insertRow(1);
-            var cell1 = row.insertCell(0);
-            cell1.innerHTML = clicked;
-
-        }
-
-        function searchbar() {
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
-            tr = table.getElementsByTagName("tr");
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-
-    </script>
 </body>
+
 </html>
