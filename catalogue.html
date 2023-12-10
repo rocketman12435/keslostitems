@@ -269,6 +269,14 @@
             </tr>*/
 
         }
+
+
+
+        //alert("hello" + claimed);
+
+        setCookie('akshaj-bookcount', claimed, 1);
+
+        //alert('number of books' + getCookie('akshaj-bookcount'));
         function setCookie(cname, cvalue, exdays) {
             const d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -276,11 +284,7 @@
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         }
 
-        //alert("hello" + claimed);
-
-        setCookie('akshaj-bookcount', claimed, 1);
-
-        //alert('number of books'+getCookie('akshaj-bookcount'));
+        
 
         function getCookie(cname) {
             let name = cname + "=";
