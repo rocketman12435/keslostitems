@@ -96,7 +96,7 @@
             margin-left: auto;
             margin-right: auto;
             padding-left: 20px;
-            padding-right: 20px;
+            padding-right:20px;
         }
 
         th, td {
@@ -130,8 +130,10 @@
 <body onload="checkCookie()">
     <div id="navbar">
         <a class="active" href="index.html">Sign out</a>
-        <a onclick="theme()">Change theme</a>
+        <a href="about.html">About</a>
         <a href="dashboard.html">Dashboard</a>
+        <a onclick="theme()">Change theme</a>
+
 
     </div>
 
@@ -238,7 +240,7 @@
         let claimed = 0;
 
         function GFG_click(clicked) {
-
+            document.getElementById('myTable');
             var x = document.getElementById(clicked)
             x.style.display = "none";
             var table = document.getElementById("items");
