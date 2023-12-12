@@ -2,6 +2,7 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="icon" href="faviconnobg.ico">
     <meta charset="utf-8" />
     <title>Sign in</title>
     <link rel="stylesheet" href="./style.css" media="all">
@@ -32,7 +33,7 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            text-align:center;
+            text-align: center;
         }
 
             input[type=button]:hover {
@@ -151,7 +152,7 @@
 
 <body>
     <div id="navbar">
-        <a class="active" href="index.html" style="text-align:center;"><em>Keslostitems</em></a>
+        <a class="active" href="index.html" style="text-align:center;font-family:'Copperplate Gothic';" ><em>Keslostitems</em></a>
     </div>
     <h1 style="color:white; text-align:center;"><em>Sign in:</em></h1>
 
@@ -159,13 +160,19 @@
 
     <form name="Form" action="catalogue.html">
         <input type="text" placeholder="School username" class="center" name="Name"><br />
+        <p style="color:red" id="usershow">Wrong username. Please try again</p>
         <input id="pd" type="password" placeholder="School password" class="center" name="showpd">
+        <p style="color:red" id="passwordshow">Wrong password. Please try again</p>
         <br />
         <input type="button" value="Submit" onclick="validate()" id="subbutton">
     </form>
 
 
     <script>
+        document.getElementById('usershow').style.display = "none";
+        document.getElementById('passwordshow').style.display = "none";
+        var user = "21asharma"
+        var password = "testuser@21"
 
         function show() {
             var x = document.getElementById("pd");
@@ -191,7 +198,17 @@
             } else {
                 x.style.borderColor = "black";
                 y.style.borderColor = "black";
-                Form.submit();
+                if (x.value != user) {
+                    document.getElementById('usershow').style.display = "block";
+                    
+                }
+                if (y.value != password) {
+                    document.getElementById('passwordshow').style.display = "block";
+                }
+                else {
+                    Form.submit();
+                }
+                
             }
         }
 
