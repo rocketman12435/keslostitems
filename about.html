@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="icon" href="faviconnobg.ico">
     <link rel="stylesheet" href="./style.css" media="all">
     <meta charset="utf-8" />
-    <title>About</title>
+    <title>About Keslostitems</title>
     <style>
         #navbar {
             overflow: hidden;
@@ -47,19 +48,23 @@
         }
 
             .sticky + .content {
-                transition-duration: 0.4s;
+                transition-duration: 0.4s; 
                 padding-top: 60px;
             }
-
+        .back {
+            transition-duration:0.5s;
+        }
+            .back:hover {
+                filter: drop-shadow(8px 8px 10px coral);
+            }
     </style>
 </head>
 <body>
-    <div id="navbar">
-        <a class="active" href="index.html">Keslostitems</a>
-        <a href="catalogue.html">Catalogue</a>
-        <a href="dashboard.html">Dashboard</a>
 
-    </div>
+
+    <img src="backbutton.png" style="float:left" class="back" onclick="history.back()"/>
+    <br />
+    <br />
 
     <h1><em><b>About Keslostitems</b></em></h1>
     <p1>
