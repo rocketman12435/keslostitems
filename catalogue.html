@@ -125,84 +125,86 @@
             background-color: lightcyan;
             font-family: 'Franklin Gothic'
         }
-
-        .open-button {
-            background-color: #555;
-            color: white;
-            padding: 16px 20px;
-            border: none;
-            cursor: pointer;
-            opacity: 0.8;
-            position: fixed;
-            bottom: 23px;
-            right: 28px;
-            width: 280px;
-        }
-
-        /* The popup form - hidden by default */
-        .form-popup {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            right: 15px;
-            border: 3px solid #f1f1f1;
-            z-index: 9;
-        }
-
-        /* Add styles to the form container */
-        .form-container {
-            max-width: 300px;
-            padding: 10px;
-            background-color: white;
-        }
-
-            /* Full-width input fields */
-            .form-container input[type=text], .form-container input[type=password] {
-                width: 100%;
-                padding: 15px;
-                margin: 5px 0 22px 0;
-                border: none;
-                background: #f1f1f1;
-            }
-
-                /* When the inputs get focus, do something */
-                .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-                    background-color: #ddd;
-                    outline: none;
-                }
-
-            /* Set a style for the submit/login button */
-            .form-container .btn {
-                background-color: #04AA6D;
-                color: white;
-                padding: 16px 20px;
-                border: none;
-                cursor: pointer;
-                width: 100%;
-                margin-bottom: 10px;
-                opacity: 0.8;
-            }
-
-            /* Add a red background color to the cancel button */
-            .form-container .cancel {
-                background-color: red;
-            }
-
-            /* Add some hover effects to buttons */
-            .form-container .btn:hover, .open-button:hover {
-                opacity: 1;
-            }
     </style>
+</head>
+<body onload="checkCookie()">
+    <div id="navbar">
+        <a class="active" href="index.html">Sign out</a>
+        <a onclick="theme()">Change theme</a>
+        <a href="dashboard.html">Dashboard</a>
 
+    </div>
+
+
+    <h1 style="text-align:center; text-shadow:3px 3px blueviolet;"><b><em>This is the lost items catalogue</em></b></h1>
+    <h2 style="text-align: center; color: forestgreen; text-shadow:1.5px 1.5px cornflowerblue" class="subhead">Have a search through and see if your lost item is on it!</h2>
+    <input placeholder="Search for an item..." id="myInput" onkeyup="searchbar()" />
+    <p> </p>
+    <div style="overflow-x:auto;">
+        <table style="color:blueviolet" ; font-family:Franklin Gothic id="myTable">
+            <tr>
+                <th style="color:blue">Item name</th>
+                <th style="color:blue">Category</th>
+            </tr>
+            <tr class="cell cell1" id="Lord of the Rings" onClick="GFG_click(this.id)">
+                <td>Lord of the Rings</td>
+                <td>Book</td>
+
+            </tr>
+
+            <tr class="cell cell1" id="Size 7 leather shoes" onClick="GFG_click(this.id)">
+                <td>Size 7 leather shoes</td>
+                <td>Shoes</td>
+
+            </tr>
+            <tr class="cell cell1" id="Grey pencil case" onClick="GFG_click(this.id)">
+                <td>Grey pencil case</td>
+                <td>Stationery</td>
+
+            </tr>
+            <tr class="cell cell1" id="KES Rugby Jersey" onClick="GFG_click(this.id)">
+                <td>KES Rugby Jersey</td>
+                <td>Sports clothing</td>
+
+            </tr>
+            <tr class="cell cell1" id="White long-sleeved shirt" onClick="GFG_click(this.id)">
+                <td>White long-sleeved shirt</td>
+                <td>School clothing</td>
+
+            </tr>
+            <tr class="cell cell1" id="Cricket pad" onClick="GFG_click(this.id)">
+                <td>Cricket pad</td>
+                <td>Sports kits</td>
+
+            </tr>
+            <tr class="cell cell1" id="Science goggles" onClick="GFG_click(this.id)">
+                <td>Science goggles</td>
+                <td>Lesson equipment</td>
+
+            </tr>
+
+
+
+        </table>
+
+        <p id="GFG_UP" style="font-size: 15px;
+                          font-weight: bold;">
+        </p>
+
+
+        <p id="GFG_DOWN" style="color:green;
+                            font-size: 20px;
+                            font-weight: bold;">
+        </p>
+    </div>
+
+
+    <table id="items" style="color:blueviolet; width:20%;">
+        <tr>
+            <th style="color:blue;">Items claimed</th>
+        </tr>
+    </table>
     <script>
-
-        function openForm() {
-            document.getElementById("myForm").style.display = "block";
-        }
-
-        function closeForm() {
-            document.getElementById("myForm").style.display = "none";
-        }
         window.onscroll = function () { myFunction() };
 
         var navbar = document.getElementById("navbar");
@@ -225,6 +227,12 @@
         }
 
 
+
+
+
+
+
+
         var el_up = document.getElementById("GFG_UP");
         var el_down = document.getElementById("GFG_DOWN");
         let claimed = 0;
@@ -239,52 +247,20 @@
             cell1.innerHTML = clicked;
             claimed++;
 
-        }
-        function additems() {
-            //alert(document.getElementById('itemn').value);
-            //document.getElementById('myTable')
+            //alert("hello" + claimed);
 
-         var row = myTable.insertRow(1);
-            row.id = document.getElementById('itemn').value;
-            //alert(row.id);
-           // row.classList.add("cell cell1");
+            setCookie('akshaj-bookcount', claimed, 1);
 
-            var td1 = row.insertCell(0);
-            var td2 = row.insertCell(1);
-      
-            td1.innerHTML = document.getElementById('itemn').value;
-            td2.innerHTML = document.getElementById('itemc').value;
-            //row.onclick = GFG_click(document.getElementById('itemn').value);
-            //document.GetElementById('cell1').classList.add("cell cell1");
-            //ocument.getElementById('cell2').classList.add("cell cell1");
-            td1.id = document.getElementById('itemn').value;
-            td2.id = document.getElementById('itemc').value;
-           // document.getElementById(row.id).style.borderColor = "red";
-            //document.write(document.getElementById('cell2').id);
-
-
-            /*<tr class="cell cell1" id="Cricket pad" onClick="GFG_click(this.id)">
-                <td>Cricket pad</td>
-                <td>Sports kits</td>
-            </tr>*/
+            //alert('number of books'+getCookie('akshaj-bookcount'));
 
         }
 
-
-
-        //alert("hello" + claimed);
-
-        setCookie('akshaj-bookcount', claimed, 1);
-
-        //alert('number of books' + getCookie('akshaj-bookcount'));
         function setCookie(cname, cvalue, exdays) {
             const d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
             let expires = "expires=" + d.toUTCString();
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         }
-
-        
 
         function getCookie(cname) {
             let name = cname + "=";
@@ -336,102 +312,10 @@
             }
         }
 
+
+
+
+
     </script>
-
-</head>
-<body onload="checkCookie()">
-    <div id="navbar">
-        <a class="active" href="index.html">Keslostitems</a>
-        <a href="about.html">About</a>
-        <a href="signin.html">Sign out</a>
-        <a onclick="theme()">Change theme</a>
-        <a href="dashboard.html">Dashboard</a>
-
-    </div>
-
-
-    <h1 style="text-align:center; text-shadow:3px 3px blueviolet; color:white;"><b><em>This is the lost items catalogue</em></b></h1>
-    <h2 class="subhead" style="color: blueviolet; text-align: center; text-shadow: 2px 2px coral;">Have a search through and see if your lost item is on it!</h2>
-    <input placeholder="Search for an item..." id="myInput" onkeyup="searchbar()" />
-    <p> </p>
-    <div style="overflow-x:auto;">
-        <table style="color:blueviolet" ; font-family:Franklin Gothic id="myTable">
-            <tr>
-                <th style="color:blue">Item name</th>
-                <th style="color:blue">Category</th>
-            </tr>
-            <tr class="cell cell1" id="Lord of the Rings" onClick="GFG_click(this.id)">
-                <td>Lord of the Rings</td>
-                <td>Book</td>
-
-            </tr>
-
-            <tr class="cell cell1" id="Size 7 leather shoes" onClick="GFG_click(this.id)">
-                <td>Size 7 leather shoes</td>
-                <td>Shoes</td>
-
-            </tr>
-            <tr class="cell cell1" id="Grey pencil case" onClick="GFG_click(this.id)">
-                <td>Grey pencil case</td>
-                <td>Stationery</td>
-
-            </tr>
-            <tr class="cell cell1" id="KES Rugby Jersey" onClick="GFG_click(this.id)">
-                <td>KES Rugby Jersey</td>
-                <td>Sports clothing</td>
-
-            </tr>
-            <tr class="cell cell1" id="White long-sleeved shirt" onClick="GFG_click(this.id)">
-                <td>White long-sleeved shirt</td>
-                <td>School clothing</td>
-
-            </tr>
-            <tr class="cell cell1" id="Cricket pad" onClick="GFG_click(this.id)">
-                <td>Cricket pad</td>
-                <td>Sports kits</td>
-            </tr>
-            <tr class="cell cell1" id="Science goggles" onClick="GFG_click(this.id)">
-                <td>Science goggles</td>
-                <td>Lesson equipment</td>
-
-            </tr>
-
-        </table>
-        <button class="open-button" onclick="openForm()">Open Form</button>
-
-        <div class="form-popup" id="myForm">
-            <form action="additems()" class="form-container">
-                <h1>Add item</h1>
-
-                <input style="font-size:12px; width:270px;height:15px;" type="text" placeholder="Item name" name="email" id="itemn" required>
-
-
-                <input style="font-size: 12px; width: 270px; height: 15px;" type="text" placeholder="Item category" name="psw" id="itemc" required>
-
-                <button type="button" class="btn" onclick="additems()">Add item</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-            </form>
-        </div>
-
-
-
-        <p id="GFG_UP" style="font-size: 15px;
-                          font-weight: bold;">
-        </p>
-
-
-        <p id="GFG_DOWN" style="color:green;
-                            font-size: 20px;
-                            font-weight: bold;">
-        </p>
-    </div>
-
-
-    <table id="items" style="color:blueviolet; width:20%;">
-        <tr>
-            <th style="color:blue;">Items claimed</th>
-        </tr>
-    </table>
 </body>
-
 </html>
