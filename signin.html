@@ -193,18 +193,22 @@
 
             } else if (y.value == "") {
                 y.style.borderColor = "red";
-                alert("Name must be filled out");
+                alert("Password must be filled out");
                 return false;
             } else {
                 x.style.borderColor = "black";
                 y.style.borderColor = "black";
+                //Check is hardquoted username is matching
                 if (x.value != user) {
                     document.getElementById('usershow').style.display = "block";
+                    //Check if hardquoted password is matching
+                    if (y.value != password) {
+                        document.getElementById('passwordshow').style.display = "block";
+                    }
                     
                 }
-                if (y.value != password) {
-                    document.getElementById('passwordshow').style.display = "block";
-                }
+                
+                //Go to catalogue.html
                 else {
                     Form.submit();
                 }
