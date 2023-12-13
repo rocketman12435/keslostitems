@@ -8,12 +8,10 @@
     <meta charset="utf-8" />
     <title>Dashboard</title>
 </head>
+<!--Styling for page-->
 <style>
     .bounce {
-        /* Uncomment as needed. */
-        /* width: 100px; */
-        /* height: 100px; */
-        /* background-color: deeppink; */
+
         animation-name: bounce;
         animation-duration: .5s;
         animation-iteration-count: infinite;
@@ -100,6 +98,7 @@
         }
 
 </style>
+<!-- Runs the checkCookie function when the page loads-->
 <body onload="checkCookie()">
     <div id="navbar">
         <a class="active" href="index.html">Sign out</a>
@@ -110,10 +109,12 @@
 
     </div>
     <h1><em>Dashboard</em></h1>
+    <!-- This is the line that displays the value of the cookie-->
     <h2>You have claimed <span style="color: coral; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 8px blueviolet;" id="numitems"> 0 </span> items</h2>
 
     
     <script>
+        //Retrieves the cookie
         function getCookie(cname) {
             let name = cname + "=";
             let decodedCookie = decodeURIComponent(document.cookie);
@@ -129,6 +130,7 @@
             }
             return "";
         }
+        //Displays the cookie in the line
 
         function checkCookie() {
             let num = getCookie("akshaj-bookcount");
@@ -143,6 +145,8 @@
                 }
             }
         }
+
+        //Dark mode or light mode
 
         function theme() {
             var element = document.body;
