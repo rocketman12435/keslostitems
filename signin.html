@@ -159,17 +159,16 @@
 
 
     <form name="Form" action="catalogue.html">
-        <input type="text" placeholder="School username" class="center" name="Name"><br />
-        <p style="color:red" id="usershow">Wrong username. Please try again</p>
+        <input type="text" placeholder="School username" class="center" name="Name" id="username"><br />
+
         <input id="pd" type="password" placeholder="School password" class="center" name="showpd">
-        <p style="color:red" id="passwordshow">Wrong password. Please try again</p>
+        <p style="color:red" id="passwordshow">Wrong username or password. Please try again</p>
         <br />
         <input type="button" value="Submit" onclick="validate()" id="subbutton">
     </form>
 
 
     <script>
-        document.getElementById('usershow').style.display = "none";
         document.getElementById('passwordshow').style.display = "none";
         var user = "21asharma"
         var password = "testuser@21"
@@ -186,11 +185,12 @@
         function validate() {
             var x = document.forms["Form"]["Name"];
             var y = document.forms["Form"]["showpd"];
+            //Is username field filled out?
             if (x.value == "") {
                 x.style.borderColor = "red";
-                alert("Name must be filled out");
+                alert("Username must be filled out");
                 return false;
-
+            //Is password field filled out?
             } else if (y.value == "") {
                 y.style.borderColor = "red";
                 alert("Password must be filled out");
@@ -198,18 +198,20 @@
             } else {
                 x.style.borderColor = "black";
                 y.style.borderColor = "black";
-                //Check is hardquoted username is matching
+                //Is the username wrong?
                 if (x.value != user) {
-                    document.getElementById('usershow').style.display = "block";
-                    //Check if hardquoted password is matching
-                    if (y.value != password) {
-                        document.getElementById('passwordshow').style.display = "block";
-                    }
+                    document.getElementById('passwordshow').style.display = "block";
+                   
                     
                 }
-                
-                //Go to catalogue.html
-                else {
+                //Is the password wrong?
+                if (y.value != password) {
+                    document.getElementById('passwordshow').style.display = "block";
+
+                //If everything is right, submit the form (go to catalogue.html)
+                  
+                }
+                else if (y.value==password && x.value==user) {
                     Form.submit();
                 }
                 
