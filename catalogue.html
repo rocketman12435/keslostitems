@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="./style.css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="faviconnobg.ico">
-
+    <!--Styling for the page-->
     <style>
 
         .cell {
@@ -127,7 +127,9 @@
         }
     </style>
 </head>
+<!--Runs the checkCookie function when the site loads-->
 <body onload="checkCookie()">
+    <!--Navbar content-->
     <div id="navbar">
         <a class="active" href="index.html">Sign out</a>
         <a href="about.html">About</a>
@@ -136,6 +138,7 @@
 
 
     </div>
+    <!--Catalogue tables and text-->
 
 
     <h1 style="text-align:center; text-shadow:3px 3px blueviolet;"><b><em>This is the lost items catalogue</em></b></h1>
@@ -207,6 +210,7 @@
         </tr>
     </table>
     <script>
+        //Function for navbar
         window.onscroll = function () { myFunction() };
 
         var navbar = document.getElementById("navbar");
@@ -221,7 +225,7 @@
             }
         }
 
-
+        //Dark or light theme
         function theme() {
             var element = document.body;
             element.classList.toggle("dark-mode");
@@ -234,10 +238,12 @@
 
 
 
-
+        
         var el_up = document.getElementById("GFG_UP");
         var el_down = document.getElementById("GFG_DOWN");
         let claimed = 0;
+
+        //Gets the ID of the element and then displays it in the Items claimed table
 
         function GFG_click(clicked) {
             document.getElementById('myTable');
@@ -256,6 +262,7 @@
             //alert('number of books'+getCookie('akshaj-bookcount'));
 
         }
+        //Makes a cookie with the no. of items claimed
 
         function setCookie(cname, cvalue, exdays) {
             const d = new Date();
@@ -263,6 +270,7 @@
             let expires = "expires=" + d.toUTCString();
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         }
+        //Retrieves the cookie
 
         function getCookie(cname) {
             let name = cname + "=";
@@ -294,6 +302,8 @@
                 }
             }
         }
+
+        //Function for searching the items in the table
 
         function searchbar() {
             var input, filter, table, tr, td, i, txtValue;
