@@ -240,14 +240,11 @@
         let claimed = 0;
 
         function GFG_click(clicked) {
-            document.getElementById('myTable');
             var x = document.getElementById(clicked)
-            x.style.display = "none";
-            myTable.deleteRow(clicked);
-            var table = document.getElementById("items");
-            document.getElementById(clicked).remove();
-
-            var row = table.insertRow(1);
+            var table = document.getElementById("myTable");
+            table1 = document.getElementById('items');
+            table.deleteRow(delid.rowIndex);
+            var row = table1.insertRow(1);
             var cell1 = row.insertCell(0);
             cell1.innerHTML = clicked;
             claimed++;
