@@ -55,49 +55,18 @@
     <meta name="generator" content="" />
     <!-- Site favicon icons -->
     <link rel="icon" href="faviconnobg.ico">
+    <script>
+        function toggleTheme() {
+            var currentTheme = document.documentElement.getAttribute('data-theme');
+            var switchToTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-
-    <style>
-        body {
-            background-color: lightskyblue;
-            color: black;
+            document.documentElement.setAttribute('data-theme', switchToTheme);
         }
 
-
-        p1 {
-            font-size: 40px
-        }
-
-
-
-        * {
-            box-sizing: border-box
-        }
-
-        body {
-            font-family: Verdana, sans-serif;
-            margin: 0
-        }
-
-        .mySlides {
-            display: none;
-            padding-left: 400px;
-        }
-
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .imgcenter {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #delaydiv {
-        }
-    </style>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('theme-toggle-button').addEventListener('click', toggleTheme);
+        });
+    </script>
 </head>
 
 <body>
@@ -105,6 +74,7 @@
         <a class="active" style="font-family:'Copperplate Gothic';"><em>Keslostitems</em></a>
         <a href="about.html">About</a>
         <a href="signin.html" target="_blank">Sign in</a>
+        <button id="theme-toggle-button">Toggle Theme</button>
     </div>
 
 
@@ -140,21 +110,21 @@
             <div class="carousel-inner">
 
                 <div class="item active">
-                    <img src="lordoftherings.jpg" alt="Lord of the Rings" id="Lord of the Rings" style="width:150px; height:225px;">
+                    <img src="imgs/lordoftherings.jpg" alt="Lord of the Rings" id="Lord of the Rings" style="width:150px; height:225px;">
                 </div>
 
                 <div class="item">
-                    <img src="size7leathershoes.jpg" alt="Size 7 leather shoes" id="Size 7 leather shoes" style="width: 150px; height: 225px;">
+                    <img src="imgs/size7leathershoes.jpg" alt="Size 7 leather shoes" id="Size 7 leather shoes" style="width: 150px; height: 225px;">
                 </div>
 
                 <div class="item">
-                    <img src="greypencilcase.jpg" alt="Grey pencil case" id="Grey pencil case" style="width: 239px; height: 225px;">
+                    <img src="imgs/greypencilcase.jpg" alt="Grey pencil case" id="Grey pencil case" style="width: 239px; height: 225px;">
                 </div>
                 <div class="item">
-                    <img src="kesrugbyjersey.jpg" alt="KES Rugby jersey" id="KES Rugby jersey" style="width: 225px; height: 225px;">
+                    <img src="imgs/kesrugbyjersey.jpg" alt="KES Rugby jersey" id="KES Rugby jersey" style="width: 225px; height: 225px;">
                 </div>
                 <div class="item">
-                    <img src="whitelongsleevedshirt.jpg" alt="KES Rugby jersey" id="KES Rugby jersey" style="width: 225px; height: 225px;">
+                    <img src="imgs/whitelongsleevedshirt.jpg" alt="KES Rugby jersey" id="KES Rugby jersey" style="width: 225px; height: 225px;">
                 </div>
             </div>
 
@@ -176,7 +146,6 @@
     <link rel="stylesheet" type="text/css" href="./style.css" media="print" />
     <script src="" async defer></script>
     <script>
-       
         window.onscroll = function () { myFunction() };
 
         var navbar = document.getElementById("navbar");
