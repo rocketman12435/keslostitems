@@ -1,17 +1,33 @@
-:root[data-theme="light"] {
-    --text: #060809;
-    --background: #b8dcff;
-    --primary: #85cdfa;
-    --secondary: #94bed6;
-    --accent: #57b5ef;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root[data-bs-theme="light"] {
+    --text: #06090e;
+    --background: #ccd9ff;
+    --primary: #0084ff;
+    --secondary: #84bcf0;
+    --accent: #55a8f7;
+    --out: 'Outfit', sans-serif;
+    --rale: 'Raleway', sans-serif;
 }
 
-:root[data-theme="dark"] {
-    --text: #f6f8f9;
-    --background: #003b75;
-    --primary: #054d7a;
-    --secondary: #29536b;
-    --accent: #106ea8;
+:root[data-bs-theme="dark"] {
+    --text: #f1f4f9;
+    --background: #000d33;
+    --primary: #0084ff;
+    --secondary: #0f477b;
+    --accent: #085caa;
+    --out: 'Outfit', sans-serif;
+    --rale: 'Raleway', sans-serif;
+}
+
+body {
+    transition-duration: 0.5s;
+    padding: 25px;
+    background-color: var(--background);
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Franklin Gothic';
 }
 
 .subhead {
@@ -22,8 +38,8 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 60%;
-    border: 5px solid lightgreen;
-    font-family: 'Franklin Gothic';
+    border: 5px solid var(--accent);
+    font-family: var(--rale);
 }
 
 th,
@@ -33,17 +49,7 @@ td {
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-body {
-    transition-duration: 0.5s;
-    padding: 25px;
     background-color: var(--primary);
-    color: black;
-    font-size: 25px;
-    text-align: center;
-    font-family: 'Franklin Gothic';
 }
 
 #navbar {
@@ -57,7 +63,7 @@ body {
     transition-duration: 0.4s;
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: var(--primary);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -71,7 +77,7 @@ body {
 }
 
 #navbar a.active {
-    background-color: #04AA6D;
+    background-color: var(--accent);
     color: white;
 }
 
@@ -110,16 +116,12 @@ input {
     align-content: center;
 }
 
-body {
-    font-family: 'Franklin Gothic';
-}
-
 input[type=button] {
     transition-duration: 0.4s;
     border-radius: 18px;
     text-shadow: 1px 1px blueviolet;
     font-size: 25px;
-    background-color: white;
+    background-color: var(--secondary);
     border-color: cornflowerblue;
     display: block;
     margin-left: auto;
@@ -195,8 +197,7 @@ input[type=password]:focus {
     margin-right: auto;
 }
 
-#delaydiv {
-}
+#delaydiv {}
 
 .bounce {
     /* Uncomment as needed. */
@@ -206,7 +207,7 @@ input[type=password]:focus {
     animation-name: bounce;
     animation-duration: .5s;
     animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(.5,1,1,1);
+    animation-timing-function: cubic-bezier(.5, 1, 1, 1);
 }
 
 @keyframes bounce {
@@ -227,15 +228,6 @@ input[type=password]:focus {
     }
 }
 
-body {
-    transition-duration: 0.5s;
-    padding: 25px;
-    background-color: lightskyblue;
-    color: black;
-    font-size: 25px;
-    text-align: center;
-}
-
 .dark-mode {
     transition-duration: 0.5s;
     background-color: darkblue;
@@ -250,13 +242,6 @@ body {
     box-sizing: border-box;
 }
 
-body {
-    font-family: Verdana, sans-serif;
-    margin: 0;
-    background-color: var(--background);
-    color: black;
-}
-
 .mySlides {
     display: none;
     padding-left: 400px;
@@ -268,8 +253,7 @@ img {
     margin-right: auto;
 }
 
-.delaydiv {
-}
+.delaydiv {}
 
 .cell {
     transition-duration: 0.4s;
@@ -315,7 +299,7 @@ th {
 
 tr:nth-child(even) {
     transition-duration: 1.5s;
-    background-color: #f2f2f2;
+    background-color: var(--primary);
 }
 
 input {

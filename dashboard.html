@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" data-bs-theme="light">
 
 <head>
     <link rel="icon" href="faviconnobg.ico">
-    <link rel="stylesheet" type="text/css" href="./style.css" media="all" />
     <meta charset="utf-8" />
     <title>Dashboard</title>
     <script>
         function toggleTheme() {
-            var currentTheme = document.documentElement.getAttribute('data-theme');
+            var currentTheme = document.documentElement.getAttribute('data-bs-theme');
             var switchToTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-            document.documentElement.setAttribute('data-theme', switchToTheme);
+            document.documentElement.setAttribute('data-bs-theme', switchToTheme);
         }
 
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('theme-toggle-button').addEventListener('click', toggleTheme);
         });
     </script>
+    <link rel="stylesheet" type="text/css" href="./style.css" media="all" />
 </head>
 <body onload="checkCookie()">
     <div id="navbar">
