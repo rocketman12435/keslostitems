@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html data-bs-theme="light">
-<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="icon" href="./imgs/faviconnobg.ico">
+    <meta charset="utf-8" />
     <title>Catalogue</title>
-    <link rel="icon" href="FaviconHomepage.ico">
-    <link rel="stylesheet" type="text/css" href="./style.css" media="all" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="faviconnobg.ico">
+    <script>
+        function toggleTheme() {
+            var currentTheme = document.documentElement.getAttribute('data-bs-theme');
+            var switchToTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
+            document.documentElement.setAttribute('data-bs-theme', switchToTheme);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('theme-toggle-button').addEventListener('click', toggleTheme);
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="./style.css" media="all" />
 </head>
 <body onload="checkCookie()">
-    <div id="navbar">
-        <a class="active" href="index.html">Sign out</a>
-        <a href="about.html">About</a>
-        <a href="dashboard.html">Dashboard</a>
-        <button id="theme-toggle-button">Toggle Theme</button>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">Sign out</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+            </ul>
+        </div>
+        <button id="theme-toggle-button" class="btn btn-primary">Toggle Theme</button>
+    </nav>
 
 
-    </div>
-
-
-    <h1 style="text-align:center; color:white;"><b><em>Catalogue</em></b></h1>
-    <h2  style="text-align: center; color: white; text-shadow:1.5px 1.5px cornflowerblue" class="subhead">Search through and see if your lost item is on it!</h2>
-    <input placeholder="Search for an item..." id="myInput" onkeyup="searchbar()" />
+    <h1 id="abouty"><b><em>Catalogue</em></b></h1>
+    <h2  id="itemsub" class="subhead">Search through and see if your lost item is on it!</h2>
+    <input id="search" placeholder="Search for an item..." id="myInput" onkeyup="searchbar()" />
     <p> </p>
     <div style="overflow-x:auto;">
-        <table style="color:blueviolet" ; font-family:Franklin Gothic id="myTable">
+        <table id="myTable">
             <tr>
-                <th style="color:coral;">Item name</th>
-                <th style="color:coral;">Category</th>
+                <th >Item name</th>
+                <th >Category</th>
             </tr>
             <tr class="cell cell1" id="Lord of the Rings" onClick="GFG_click(this.id,this)">
                 <td>Lord of the Rings</td>
@@ -70,21 +90,18 @@
 
         </table>
 
-        <p id="GFG_UP" style="font-size: 15px;
-                        font-weight: bold;">
+        <p id="GFG_UP">
         </p>
 
 
-        <p id="GFG_DOWN" style="color:green;
-                            font-size: 20px;
-                            font-weight: bold;">
+        <p id="GFG_DOWN" >
         </p>
     </div>
 
 
-    <table id="items" style="color:blueviolet; width:20%;">
+    <table id="items">
         <tr>
-            <th style="color:coral;">Items claimed</th>
+            <th >Items claimed</th>
         </tr>
     </table>
     <script>
@@ -101,22 +118,6 @@
                 navbar.classList.remove("sticky");
             }
         }
-
-
-        function toggleTheme() {
-            var currentTheme = document.documentElement.getAttribute('data-theme');
-            var switchToTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-            document.documentElement.setAttribute('data-theme', switchToTheme);
-        }
-    
-        document.getElementById('theme-toggle-button').addEventListener('click', toggleTheme);
-
-
-
-
-
-
 
         var el_up = document.getElementById("GFG_UP");
         var el_down = document.getElementById("GFG_DOWN");

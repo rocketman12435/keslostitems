@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* https://www.realtimecolors.com/?colors=040316-ccd9ff-90d6f4-f47a76-80b5ff&fonts=Outfit-Raleway */
 :root[data-bs-theme="light"] {
@@ -8,8 +7,8 @@
     --primary: #90d6f4;
     --secondary: #f47a76;
     --accent: #80b5ff;
-    --out: 'Outfit', sans-serif;
-    --rale: 'Raleway', sans-serif;
+    --out: "Outfit", sans-serif;
+    --rale: "Raleway", sans-serif;
 }
 
 :root[data-bs-theme="dark"] {
@@ -18,8 +17,8 @@
     --primary: #0b516f;
     --secondary: #890f0b;
     --accent: #003580;
-    --out: 'Outfit', sans-serif;
-    --rale: 'Raleway', sans-serif;
+    --out: "Outfit", sans-serif;
+    --rale: "Raleway", sans-serif;
 }
 
 body {
@@ -29,7 +28,7 @@ body {
     color: var(--text);
     font-size: 25px;
     text-align: center;
-    font-family: 'Franklin Gothic';
+    font-family: "Franklin Gothic";
 }
 
 .subhead {
@@ -42,15 +41,31 @@ table {
     width: 60%;
     border: 5px solid var(--accent);
     font-family: var(--rale);
+    transition-duration: 0.6s;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 42%;
+    border: 5px solid var(--primary);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 th,
 td {
     text-align: left;
     padding: 16px;
+    text-align: center;
+    padding: 16px;
+    padding-left: 10px;
+    padding-right: 15px;
 }
 
 tr:nth-child(even) {
+    background-color: var(--primary);
+    transition-duration: 0.5s;
     background-color: var(--primary);
 }
 
@@ -58,7 +73,7 @@ tr:nth-child(even) {
     overflow: hidden;
     background-color: #333;
     transition-duration: 0.4s;
-    font-family: 'Franklin Gothic';
+    font-family: "Franklin Gothic";
 }
 
 #navbar a {
@@ -94,7 +109,7 @@ tr:nth-child(even) {
     width: 100%;
 }
 
-.sticky+.content {
+.sticky + .content {
     transition-duration: 0.4s;
     padding-top: 60px;
 }
@@ -104,7 +119,7 @@ tr:nth-child(even) {
 }
 
 .back:hover {
-    filter: drop-shadow(8px 8px 10px coral);
+    filter: drop-shadow(8px 8px 10px var(--accent));
 }
 
 .center {
@@ -116,9 +131,15 @@ tr:nth-child(even) {
 input {
     border: none;
     align-content: center;
+    border-radius: 30px;
+    width: 100%;
+    height: 70px;
+    font-size: 30px;
+    background-color: var(--background);
+    font-family: "Franklin Gothic";
 }
 
-input[type=button] {
+input[type="button"] {
     transition-duration: 0.4s;
     border-radius: 18px;
     text-shadow: 1px 1px var(--secondary);
@@ -131,11 +152,11 @@ input[type=button] {
     text-align: center;
 }
 
-input[type=button]:hover {
+input[type="button"]:hover {
     background-color: var(--accent);
 }
 
-input[type=text] {
+input[type="text"] {
     border-radius: 23px;
     width: 25%;
     height: 20%;
@@ -151,7 +172,7 @@ input[type=text] {
     margin-right: auto;
 }
 
-input[type=password] {
+input[type="password"] {
     border-radius: 23px;
     width: 25%;
     padding: 12px 20px;
@@ -166,14 +187,14 @@ input[type=password] {
     margin-right: auto;
 }
 
-input[type=text]:focus {
+input[type="text"]:focus {
     transition-duration: 0.5s;
     width: 30%;
     height: 50%;
     border: 7px solid var(--accent);
 }
 
-input[type=password]:focus {
+input[type="password"]:focus {
     transition-duration: 0.5s;
     width: 30%;
     height: 50%;
@@ -199,7 +220,8 @@ input[type=password]:focus {
     margin-right: auto;
 }
 
-#delaydiv {}
+#delaydiv {
+}
 
 .bounce {
     /* Uncomment as needed. */
@@ -207,9 +229,9 @@ input[type=password]:focus {
     /* height: 100px; */
     /* background-color: deeppink; */
     animation-name: bounce;
-    animation-duration: .5s;
+    animation-duration: 0.5s;
     animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(.5, 1, 1, 1);
+    animation-timing-function: cubic-bezier(0.5, 1, 1, 1);
 }
 
 @keyframes bounce {
@@ -226,13 +248,13 @@ input[type=password]:focus {
     }
 
     100% {
-        transform: scale(.99) translate(0, -30%);
+        transform: scale(0.99) translate(0, -30%);
     }
 }
 
 .dark-mode {
     transition-duration: 0.5s;
-    background-color: darkblue;
+    background-color: var(--primary);
     color: white;
 }
 
@@ -255,8 +277,6 @@ img {
     margin-right: auto;
 }
 
-.delaydiv {}
-
 .cell {
     transition-duration: 0.4s;
 }
@@ -271,27 +291,6 @@ img {
     color: white;
 }
 
-table {
-    transition-duration: 0.6s;
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 42%;
-    border: 5px solid var(--primary);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-th,
-td {
-    text-align: center;
-    padding: 16px;
-    padding-left: 10px;
-    padding-right: 15px;
-}
-
 th {
     text-shadow: 2px 2px var(--secondary);
     font-size: 40px;
@@ -299,42 +298,53 @@ th {
     color: var(--accent);
 }
 
-tr:nth-child(even) {
-    transition-duration: 1.5s;
-    background-color: var(--primary);
-}
-
-input {
-    border-radius: 30px;
-    width: 100%;
-    height: 70px;
-    font-size: 30px;
-    background-color: var(--background);
-    font-family: 'Franklin Gothic';
-}
-
 .container {
     background-color: var(--primary);
     width: 25%;
 }
 
-#header{
-    text-align:center; text-shadow:3px 3px blueviolet;
+#header {
+    text-align: center;
+    text-shadow: 3px 3px var(--primary);
 }
 
-#subhead{
-    color: blueviolet; text-align: center; text-shadow: 2px 2px coral;
+#subhead {
+    color: var(--primary);
+    text-align: center;
+    text-shadow: 2px 2px var(--secondary);
 }
 
-.carahead{
-    text-align:center; color:lightcoral;
+.carahead {
+    text-align: center;
+    color: var(--secondary);
 }
 
-#abouty{
-    color:white;
+#abouty {
+    color: white;
 }
 
-#numitems{
-    color: coral; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 8px blueviolet;
+#numitems {
+    color: var(--secondary);
+    text-shadow: 1px 1px 2px black, 0 0 25px var(--primary), 0 0 8px var(--accent);
 }
 
+#itemhead{
+    color:var(--secondary);
+}
+
+#itemsub{
+    text-align: center; color: white; text-shadow:1.5px 1.5px var(--primary)
+}
+
+#search{
+    border: var(--accent);
+    background-color: var(--secondary);
+}
+
+#items{
+    width: fit-content;
+}
+
+#myTable{
+    width: fit-content;
+}
