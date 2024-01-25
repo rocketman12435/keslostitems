@@ -9,6 +9,7 @@
     --accent: #80b5ff;
     --out: "Outfit", sans-serif;
     --rale: "Raleway", sans-serif;
+    --opacity: 0.5;
 }
 
 :root[data-bs-theme="dark"] {
@@ -19,6 +20,7 @@
     --accent: #003580;
     --out: "Outfit", sans-serif;
     --rale: "Raleway", sans-serif;
+    --opacity: 0.5;
 }
 
 body {
@@ -300,7 +302,7 @@ th {
 
 .container {
     background-color: var(--primary);
-    width: 300px;
+    width: 350px;
 }
 
 #header {
@@ -339,8 +341,10 @@ th {
 }
 
 #search {
-    border: var(--accent);
+    border: 1px solid var(--accent);
     background-color: var(--secondary);
+    opacity: var(--opacity);
+    width: 50%;
 }
 
 #items {
@@ -387,10 +391,18 @@ th {
     font-family: var(--rale);
 }
 
+#left{
+    text-decoration: none;
+}
+
 .ani15 {
     animation-duration: 1.5s;
 }
 
 .catadiv {
     overflow-x: auto;
+}
+
+#subbutton{
+    width: 25%;
 }
