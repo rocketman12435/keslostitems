@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" data-bs-theme="light">
+
 <head>
     <link rel="icon" href="../imgs/faviconnobg.ico">
     <meta charset="utf-8" />
@@ -10,7 +11,7 @@
 
 <body>
     <div id="navbar">
-        <a class="active" href="../" id="namey" ><em>Keslostitems</em></a>
+        <a class="active" href="../" id="namey"><em>Keslostitems</em></a>
     </div>
     <h1 id="abouty"><em>Sign in:</em></h1>
 
@@ -47,7 +48,7 @@
                 x.style.borderColor = "red";
                 alert("Username must be filled out");
                 return false;
-            //Is password field filled out?
+                //Is password field filled out?
             } else if (y.value == "") {
                 y.style.borderColor = "red";
                 alert("Password must be filled out");
@@ -58,24 +59,25 @@
                 //Is the username wrong?
                 if (x.value != user) {
                     document.getElementById('passwordshow').style.display = "block";
-                   
-                    
+
+
                 }
                 //Is the password wrong?
                 if (y.value != password) {
                     document.getElementById('passwordshow').style.display = "block";
 
-                //If everything is right, submit the form (go to catalogue.html)
-                  
+                    //If everything is right, submit the form (go to catalogue.html)
+
                 }
-                else if (y.value==password && x.value==user) {
+                else if (y.value == password && x.value == user) {
                     Form.submit();
                 }
-                
+
             }
         }
 
 
     </script>
 </body>
+
 </html>

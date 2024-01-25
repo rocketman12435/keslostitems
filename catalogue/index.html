@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html data-bs-theme="light">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="icon" href="../imgs/faviconnobg.ico">
-    <meta charset="utf-8" />
-    <title>Catalogue</title>
-    <script>
-        function toggleTheme() {
-            var currentTheme = document.documentElement.getAttribute('data-bs-theme');
-            var switchToTheme = currentTheme === 'dark' ? 'light' : 'dark';
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<link rel="icon" href="../imgs/faviconnobg.ico">
+<meta charset="utf-8" />
+<title>Catalogue</title>
+<script>
+    function toggleTheme() {
+        var currentTheme = document.documentElement.getAttribute('data-bs-theme');
+        var switchToTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-            document.documentElement.setAttribute('data-bs-theme', switchToTheme);
-        }
+        document.documentElement.setAttribute('data-bs-theme', switchToTheme);
+    }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('theme-toggle-button').addEventListener('click', toggleTheme);
-        });
-    </script>
-    <link rel="stylesheet" type="text/css" href="../style.css" media="all" />
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('theme-toggle-button').addEventListener('click', toggleTheme);
+    });
+</script>
+<link rel="stylesheet" type="text/css" href="../style.css" media="all" />
 </head>
+
 <body onload="checkCookie()">
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="../">Sign out</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -40,14 +45,14 @@
 
 
     <h1 id="abouty"><b><em>Catalogue</em></b></h1>
-    <h2  id="itemsub" class="subhead">Search through and see if your lost item is on it!</h2>
+    <h2 id="itemsub" class="subhead">Search through and see if your lost item is on it!</h2>
     <input id="search" placeholder="Search for an item..." id="myInput" onkeyup="searchbar()" />
     <p> </p>
     <div id="catadiv">
         <table id="myTable">
             <tr>
-                <th >Item name</th>
-                <th >Category</th>
+                <th>Item name</th>
+                <th>Category</th>
             </tr>
             <tr class="cell cell1" id="Lord of the Rings" onClick="GFG_click(this.id,this)">
                 <td>Lord of the Rings</td>
@@ -94,14 +99,14 @@
         </p>
 
 
-        <p id="GFG_DOWN" >
+        <p id="GFG_DOWN">
         </p>
     </div>
 
 
     <table id="items">
         <tr>
-            <th >Items claimed</th>
+            <th>Items claimed</th>
         </tr>
     </table>
     <script>
@@ -123,7 +128,7 @@
         var el_down = document.getElementById("GFG_DOWN");
         let claimed = 0;
 
-        function GFG_click(clicked,delid) {
+        function GFG_click(clicked, delid) {
             var x = document.getElementById(clicked)
             var table = document.getElementById("myTable");
             table1 = document.getElementById('items');
@@ -204,4 +209,5 @@
 
     </script>
 </body>
+
 </html>

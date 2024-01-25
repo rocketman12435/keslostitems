@@ -109,14 +109,14 @@ tr:nth-child(even) {
     width: 100%;
 }
 
-.sticky + .content {
+.sticky+.content {
     transition-duration: 0.4s;
     padding-top: 60px;
 }
 
 .back {
     transition-duration: 0.5s;
-    float:left
+    float: left
 }
 
 .back:hover {
@@ -221,8 +221,7 @@ input[type="password"]:focus {
     margin-right: auto;
 }
 
-#delaydiv {
-}
+#delaydiv {}
 
 .bounce {
     /* Uncomment as needed. */
@@ -329,62 +328,69 @@ th {
     text-shadow: 1px 1px 2px black, 0 0 25px var(--primary), 0 0 8px var(--accent);
 }
 
-#itemhead{
-    color:var(--secondary);
+#itemhead {
+    color: var(--secondary);
 }
 
-#itemsub{
-    text-align: center; color: white; text-shadow:1.5px 1.5px var(--primary)
+#itemsub {
+    text-align: center;
+    color: white;
+    text-shadow: 1.5px 1.5px var(--primary)
 }
 
-#search{
+#search {
     border: var(--accent);
     background-color: var(--secondary);
 }
 
-#items{
+#items {
     width: fit-content;
 }
 
-#myTable{
+#myTable {
     width: fit-content;
 }
 
 
 #img-1 {
-    width:150px; height:225px;
+    width: 150px;
+    height: 225px;
 }
 
 #img-2 {
-    width: 150px; height: 225px;
+    width: 150px;
+    height: 225px;
 }
 
 #img-3 {
-    width: 239px; height: 225px;
+    width: 239px;
+    height: 225px;
 }
 
 #img-4 {
-    width: 225px; height: 225px;
+    width: 225px;
+    height: 225px;
 }
 
 #img-5 {
-    width: 225px; height: 225px;
+    width: 225px;
+    height: 225px;
 }
 
-.desby{
+.desby {
     color: var(--secondary);
     font-family: var(--rale);
 }
 
-.namey{
-    text-align:center;
-    font-family:var(--rale);
+.namey {
+    text-align: center;
+    font-family: var(--rale);
 }
 
-.ani15{
-    animation-duration:1.5s;
+.ani15 {
+    animation-duration: 1.5s;
 }
 
-.catadiv{
-    overflow-x:auto;
+.catadiv {
+    overflow-x: auto;
 }
