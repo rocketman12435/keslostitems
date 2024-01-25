@@ -311,7 +311,7 @@ th {
 }
 
 #subhead {
-    color: var(--primary);
+    color: var(--accent);
     text-align: center;
     text-shadow: 2px 2px var(--secondary);
 }
