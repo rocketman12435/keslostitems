@@ -9,8 +9,7 @@
     --accent: #80b5ff;
     --out: "Outfit", sans-serif;
     --rale: "Raleway", sans-serif;
-    --opacity: 0.5;
-}
+    }
 
 :root[data-bs-theme="dark"] {
     --text: #eae9fc;
@@ -20,7 +19,6 @@
     --accent: #003580;
     --out: "Outfit", sans-serif;
     --rale: "Raleway", sans-serif;
-    --opacity: 0.5;
 }
 
 body {
@@ -311,9 +309,9 @@ th {
 }
 
 #subhead {
-    color: var(--accent);
+    color: var(--secondary);
     text-align: center;
-    text-shadow: 2px 2px var(--secondary);
+    text-shadow: 2px 2px var(--accent);
 }
 
 .carahead {
@@ -343,7 +341,6 @@ th {
 #search {
     border: 1px solid var(--accent);
     background-color: var(--secondary);
-    opacity: var(--opacity);
     width: 50%;
 }
 
