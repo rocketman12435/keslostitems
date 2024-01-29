@@ -69,33 +69,32 @@ tr:nth-child(even) {
     background-color: var(--primary);
 }
 
-#navbar {
+.navbar {
     overflow: hidden;
-    background-color: #333;
     transition-duration: 0.4s;
     font-family: var(--rale);
+    backdrop-filter: blur(10px);
+    position: sticky;
 }
 
-#navbar a {
+.navbar a {
     transition-duration: 0.4s;
     float: left;
     display: block;
-    color: var(--primary);
+    color: var(--text);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
 }
 
-#navbar a:hover {
+.navbar a:hover {
     transition-duration: 0.4s;
-    background-color: #ddd;
     color: var(--text);
 }
 
-#navbar a.active {
+.navbar a.active {
     background-color: var(--accent);
-    color: white;
 }
 
 .content {
@@ -295,11 +294,11 @@ th {
     text-shadow: 2px 2px var(--secondary);
     font-size: 40px;
     text-align: center;
-    color: var(--text);
+    color: var(--accent);
 }
 
 .container {
-    background-color: var(--primary);
+    background-color: #0000000f;
     width: 350px;
 }
 
@@ -342,6 +341,7 @@ th {
     border: 1px solid var(--accent);
     background-color: var(--primary);
     width: 50%;
+    fill-opacity: 0.5;
 }
 
 #items {
@@ -402,4 +402,77 @@ th {
 
 #subbutton{
     width: 25%;
+}
+
+
+@media screen and (max-width: 480px) {
+    #navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .sticky {
+        position: relative;
+    }
+
+    .sticky+.content {
+        padding-top: 0px;
+    }
+
+    .mySlides {
+        padding-left: 0px;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    #subbutton{
+        width: 100%;
+    }
+
+    #subbutton {
+        width: 100%;
+    }
+
+.container {
+    width: 100%;
+}
+
+input[type="text"]{
+    width:80%;
+}
+
+input[type="password"]{
+    width:80%;
+}
+
+input[type="text"]:focus {
+    transition-duration: 0.5s;
+    width: 100%;
+    height: 50%;
+    border: 7px solid var(--accent);
+}
+
+input[type="password"]:focus {
+    transition-duration: 0.5s;
+    width: 100%;
+    height: 50%;
+    border: 7px solid var(--secondary);
+}
+
+}
+
+footer {
+    position: relative;
+    bottom: 2rem;
+    left: 0;
+    text-align: left!important;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: var(--accent);
+    width: fit-content;
+    margin: auto;
 }
