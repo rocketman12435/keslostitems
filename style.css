@@ -220,13 +220,7 @@ input[type="password"]:focus {
     margin-right: auto;
 }
 
-#delaydiv {}
-
 .bounce {
-    /* Uncomment as needed. */
-    /* width: 100px; */
-    /* height: 100px; */
-    /* background-color: deeppink; */
     animation-name: bounce;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;

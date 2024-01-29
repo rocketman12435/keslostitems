@@ -110,12 +110,12 @@
         </tr>
     </table>
     <script>
-        window.onscroll = function () { myFunction() };
+        window.onscroll = scroll_sticky();
 
         var navbar = document.getElementById("navbar");
         var sticky = navbar.offsetTop;
 
-        function myFunction() {
+        function scroll_sticky() {
             if (window.pageYOffset >= sticky) {
                 navbar.classList.add("sticky")
             }
