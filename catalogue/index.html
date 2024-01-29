@@ -57,53 +57,37 @@
             <tr class="cell cell1" id="Lord of the Rings" onClick="GFG_click(this.id,this)">
                 <td>Lord of the Rings</td>
                 <td>Book</td>
-
             </tr>
-
             <tr class="cell cell1" id="Size 7 leather shoes" onClick="GFG_click(this.id,this)">
                 <td>Size 7 leather shoes</td>
                 <td>Shoes</td>
-
             </tr>
             <tr class="cell cell1" id="Grey pencil case" onClick="GFG_click(this.id,this)">
                 <td>Grey pencil case</td>
                 <td>Stationery</td>
-
             </tr>
             <tr class="cell cell1" id="KES Rugby Jersey" onClick="GFG_click(this.id,this)">
                 <td>KES Rugby Jersey</td>
                 <td>Sports clothing</td>
-
             </tr>
             <tr class="cell cell1" id="White long-sleeved shirt" onClick="GFG_click(this.id,this)">
                 <td>White long-sleeved shirt</td>
                 <td>School clothing</td>
-
             </tr>
             <tr class="cell cell1" id="Cricket pad" onClick="GFG_click(this.id,this)">
                 <td>Cricket pad</td>
                 <td>Sports kits</td>
-
             </tr>
             <tr class="cell cell1" id="Science goggles" onClick="GFG_click(this.id,this)">
                 <td>Science goggles</td>
                 <td>Lesson equipment</td>
-
             </tr>
-
-
-
         </table>
-
         <p id="GFG_UP">
         </p>
-
-
         <p id="GFG_DOWN">
         </p>
     </div>
-
-
     <table id="items">
         <tr>
             <th>Items claimed</th>
@@ -126,7 +110,7 @@
 
         var el_up = document.getElementById("GFG_UP");
         var el_down = document.getElementById("GFG_DOWN");
-        let claimed = 0;
+        var claimed = 0;
 
         function GFG_click(clicked, delid) {
             var x = document.getElementById(clicked)
@@ -137,28 +121,22 @@
             var cell1 = row.insertCell(0);
             cell1.innerHTML = clicked;
             claimed++;
-
-            //alert("hello" + claimed);
-
             setCookie('akshaj-bookcount', claimed, 1);
-
-            //alert('number of books'+getCookie('akshaj-bookcount'));
-
         }
 
         function setCookie(cname, cvalue, exdays) {
             const d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            let expires = "expires=" + d.toUTCString();
+            var expires = "expires=" + d.toUTCString();
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         }
 
         function getCookie(cname) {
-            let name = cname + "=";
-            let decodedCookie = decodeURIComponent(document.cookie);
-            let ca = decodedCookie.split(';');
-            for (let i = 0; i < ca.length; i++) {
-                let c = ca[i];
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
                 while (c.charAt(0) == ' ') {
                     c = c.substring(1);
                 }
@@ -171,13 +149,11 @@
         }
 
         function checkCookie() {
-            let num = getCookie("akshaj-bookcount");
+            var num = getCookie("akshaj-bookcount");
             if (num != "") {
-                //alert("You have claimed " + num+ " items");
                 document.getElementById('n');
                 n.innerHTML = num;
             } else {
-                //username = prompt("Please enter your name:", "");
                 if (num != "" && username != null) {
                     setCookie("akshaj-bookcount", username, 1);
                 }
