@@ -464,15 +464,3 @@ input[type="password"]:focus {
 
 }
 
-footer {
-    position: relative;
-    bottom: 2rem;
-    left: 0;
-    text-align: left!important;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background-color: var(--accent);
-    width: fit-content;
-    margin: auto;
-}
