@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" data-bs-theme="light">
+
+<head>
+    <link rel="icon" href="../imgs/faviconnobg.ico">
+    <meta charset="utf-8" />
+    <title>Sign in</title>
+    <link rel="stylesheet" href="../style.css" media="all">
+</head>
+
+<body>
+    <a href="../" class="namey" id="left"><em>Keslostitems</em></a>
+    <h1 id="abouty"><em>Sign in:</em></h1>
+
+
+    <form name="Form" action="../catalogue/">
+        <input type="text" placeholder="School username" class="center" name="Name" id="username"><br />
+
+        <input id="pd" type="password" placeholder="School password" class="center" name="showpd">
+        <p id="passwordshow">Wrong username or password. Please try again</p>
+        <br />
+        <input type="button" value="Submit" onclick="validate()" id="subbutton">
+    </form>
+
+
+    <script>
+        document.getElementById('passwordshow').style.display = "none";
+        var user = "21asharma"
+        var password = "testuser@21"
+
+        function show() {
+            var x = document.getElementById("pd");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+
+        function validate() {
+            var x = document.forms["Form"]["Name"];
+            var y = document.forms["Form"]["showpd"];
+            //Is username field filled out?
+            if (x.value == "") {
+                x.style.borderColor = "red";
+                alert("Username must be filled out");
+                return false;
+                //Is password field filled out?
+            } else if (y.value == "") {
+                y.style.borderColor = "red";
+                alert("Password must be filled out");
+                return false;
+            } else {
+                x.style.borderColor = "black";
+                y.style.borderColor = "black";
+                //Is the username wrong?
+                if (x.value != user) {
+                    document.getElementById('passwordshow').style.display = "block";
+
+
+                }
+                //Is the password wrong?
+                if (y.value != password) {
+                    document.getElementById('passwordshow').style.display = "block";
+
+                    //If everything is right, submit the form (go to catalogue.html)
+
+                }
+                else if (y.value == password && x.value == user) {
+                    Form.submit();
+                }
+
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
