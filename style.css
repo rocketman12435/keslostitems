@@ -9,6 +9,7 @@
     --accent: #80b5ff;
     --out: "Outfit", sans-serif;
     --rale: "Raleway", sans-serif;
+    --opacity: #0000000f ;
     }
 
 :root[data-bs-theme="dark"] {
@@ -19,6 +20,7 @@
     --accent: #003580;
     --out: "Outfit", sans-serif;
     --rale: "Raleway", sans-serif;
+    --opacity: #ffffff0f ;
 }
 
 body {
@@ -284,7 +286,7 @@ th {
 }
 
 .container {
-    background-color: #0000000f;
+    background-color: var(--opacity);
     width: 350px;
 }
 
