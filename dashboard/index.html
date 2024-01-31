@@ -91,7 +91,7 @@
         function checkCookie() {
             let num = getCookie("akshaj-bookcount");
             if (num == "" || isNaN(num)) {
-                num = 1;
+                num = 0;
             } else {
                 num = parseInt(num);
             }
@@ -108,7 +108,7 @@
     function checkCookie() {
         let num = getCookie("akshaj-bookcount");
         if (num == "" || isNaN(num)) {
-            num = 1;
+            num = 0;
         } else {
             num = parseInt(num);
         }
