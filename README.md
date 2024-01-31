@@ -1,12 +1,12 @@
-# Lost Items Finder
+# Lost Items
 
-Welcome to the Lost Items Finder project. This is a website that allows users to check lost items online. If a user finds an item they've lost, they can press a claim button to request the item. This request will be sent to the administrators of the site.
+Welcome to the Lost Items project. This is a website that allows users to check lost items online. If a user finds an item they've lost, they can press a claim button to request the item. This request will be sent to the administrators of the site.
 
 ## Features
 
 - **Item Catalogue**: Users can browse through the lost items in our [catalogue](catalogue/index.html).
 - **Claim Requests**: Users can press a claim button to request a lost item. This request is sent to the site administrators for approval.
-- **Administrator Dashboard**: Administrators can approve item requests through the [dashboard](dashboard/index.html).
+- **A Dashboard**: You can see information through the [dashboard](dashboard/index.html).
 - **User Login**: Users need to [login](login/index.html) to be able to claim items.
 
 ## Installation
