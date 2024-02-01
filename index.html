@@ -20,6 +20,12 @@
     <meta name="robots" content="index, follow, max-snippet: -1, max-image-preview:large, max-video-preview: -1" />
     <link rel="icon" href="imgs/faviconnobg.ico">
     <link rel="stylesheet" href="style.css" media="all">
+    <script>
+        var storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                document.documentElement.setAttribute('data-bs-theme', storedTheme);
+            }
+    </script>
 </head>
 
 <body >
