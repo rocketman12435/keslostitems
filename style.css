@@ -571,18 +571,14 @@ input[type="password"]:focus {
 }
 
 
+html {font-size: 3vw;}
 
-@media (max-width: 850px) {
-html {font-size: 3vw;} /* 16px */
+h1 {font-size: 10vw;}
 
-h1 {font-size: 10vw; /* 67.36px */}
+h2 {font-size: 7vw;}
 
-h2 {font-size: 7vw; /* 50.56px */}
+h3 {font-size: 4vw;}
 
-h3 {font-size: 4vw; /* 37.92px */}
+h4 {font-size: 1vw;}
 
-h4 {font-size: 1vw; /* 28.48px */}
-
-h5 {font-size: 1.333vw; /* 21.28px */}
-
-}
+h5 {font-size: 1.333vw;}
