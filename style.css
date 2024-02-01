@@ -244,11 +244,6 @@ input[type="password"]:focus {
     }
 }
 
-.dark-mode {
-    transition-duration: 0.5s;
-    background-color: var(--primary);
-    color: white;
-}
 
 * {
     box-sizing: border-box;
@@ -276,7 +271,7 @@ img {
 .cell1:hover {
     transition-duration: 0.4s;
     background-color: var(--secondary);
-    color: white;
+    color: var(--text);
 }
 
 th {
@@ -307,7 +302,7 @@ th {
 }
 
 #abouty {
-    color: white;
+    color: var(--text);
 }
 
 .numitems {
@@ -321,7 +316,7 @@ th {
 
 #itemsub {
     text-align: center;
-    color: white;
+    color: var(--text);
     text-shadow: 1.5px 1.5px var(--primary)
 }
 
