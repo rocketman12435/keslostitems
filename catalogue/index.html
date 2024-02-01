@@ -53,7 +53,7 @@
 
     <h1 id="abouty"><b><em>Catalogue</em></b></h1>
     <h2 id="itemsub" class="subhead">Search through and see if your lost item is on it!</h2>
-    <input id="search" placeholder="Search for an item..." id="myInput" onkeyup="searchbar()" />
+    <input id="search" placeholder="Search for an item..." onkeyup="searchbar()" />
     <p> </p>
     <div id="catadiv">
         <table id="myTable">
@@ -154,7 +154,7 @@
 
         function searchbar() {
             var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("myInput");
+            input = document.getElementById("search");
             filter = input.value.toUpperCase();
             table = document.getElementById("myTable");
             tr = table.getElementsByTagName("tr");
