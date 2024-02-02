@@ -286,6 +286,7 @@ th {
 }
 
 #header {
+    color: var(--text);
     text-align: center;
     text-shadow: 3px 3px var(--primary);
 }
