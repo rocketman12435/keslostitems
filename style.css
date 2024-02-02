@@ -2,25 +2,25 @@
 
 /* https://www.realtimecolors.com/?colors=0b1214-ebfbff-90d6f4-7bccef-48c4f9&fonts=Outfit-Raleway */
 :root[data-bs-theme="light"] {
-  --text: #0b1214;
-  --background: #ebfbff;
-  --primary: #90d6f4;
-  --secondary: #7bccef;
-  --accent: #48c4f9;
+    --text: #0b1214;
+    --background: #ebfbff;
+    --primary: #90d6f4;
+    --secondary: #7bccef;
+    --accent: #48c4f9;
     --out: "Outfit", sans-serif;
     --rale: "Raleway", sans-serif;
-    --opacity: #0000000f ;
-    }
+    --opacity: #0000000f;
+}
 
 :root[data-bs-theme="dark"] {
-  --text: #ebf2f4;
-  --background: #001014;
-  --primary: #0b516f;
-  --secondary: #106184;
-  --accent: #0682b7;
+    --text: #ebf2f4;
+    --background: #001014;
+    --primary: #0b516f;
+    --secondary: #106184;
+    --accent: #0682b7;
     --out: "Outfit", sans-serif;
     --rale: "Raleway", sans-serif;
-    --opacity: #ffffff0f ;
+    --opacity: #ffffff0f;
 }
 
 body {
@@ -371,7 +371,7 @@ th {
     font-family: var(--rale);
 }
 
-#left{
+#left {
     text-decoration: none;
 }
 
@@ -383,7 +383,7 @@ th {
     overflow-x: auto;
 }
 
-#subbutton{
+#subbutton {
     width: 25%;
 }
 
@@ -411,7 +411,7 @@ th {
         width: 100%;
     }
 
-    #subbutton{
+    #subbutton {
         width: 100%;
     }
 
@@ -419,33 +419,33 @@ th {
         width: 100%;
     }
 
-.container {
-    width: 100%;
-}
+    .container {
+        width: 100%;
+    }
 
-input[type="text"] {
-    width:80%;
-    height: auto;
-}
+    input[type="text"] {
+        width: 80%;
+        height: auto;
+    }
 
-input[type="password"] {
-    width:80%;
-    height: auto;
-}
+    input[type="password"] {
+        width: 80%;
+        height: auto;
+    }
 
-input[type="text"]:focus {
-    transition-duration: 0.5s;
-    width: 100%;
-    height: auto;
-    border: 7px solid var(--accent);
-}
+    input[type="text"]:focus {
+        transition-duration: 0.5s;
+        width: 100%;
+        height: auto;
+        border: 7px solid var(--accent);
+    }
 
-input[type="password"]:focus {
-    transition-duration: 0.5s;
-    width: 100%;
-    height: auto;
-    border: 7px solid var(--secondary);
-}
+    input[type="password"]:focus {
+        transition-duration: 0.5s;
+        width: 100%;
+        height: auto;
+        border: 7px solid var(--secondary);
+    }
 }
 
 
@@ -473,7 +473,7 @@ input[type="password"]:focus {
         width: 100%;
     }
 
-    #subbutton{
+    #subbutton {
         width: 100%;
     }
 
@@ -486,12 +486,12 @@ input[type="password"]:focus {
     }
 
     input[type="text"] {
-        width:80%;
+        width: 80%;
         height: auto;
     }
 
     input[type="password"] {
-        width:80%;
+        width: 80%;
         height: auto;
     }
 
@@ -512,7 +512,8 @@ input[type="password"]:focus {
 
 @media screen and (max-width: 500px) {
 
-    input[type="password"], input[type="text"] {
+    input[type="password"],
+    input[type="text"] {
         width: 90%;
         height: auto;
     }
@@ -520,7 +521,8 @@ input[type="password"]:focus {
 
 @media screen and (max-width: 768px) {
 
-    input[type="password"], input[type="text"] {
+    input[type="password"],
+    input[type="text"] {
         width: 80%;
         height: auto;
     }
@@ -535,7 +537,7 @@ input[type="password"]:focus {
         position: relative;
     }
 
-    .sticky + .content {
+    .sticky+.content {
         padding-top: 0px;
     }
 
@@ -571,14 +573,14 @@ input[type="password"]:focus {
 }
 
 .footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: red;
-   color: white;
-   text-align: center;
-   height:100px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--secondary);
+    color: white;
+    text-align: center;
+    height: 100px;
 }
 
 /*
