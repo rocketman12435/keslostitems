@@ -577,8 +577,7 @@ th {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: var(--secondary);
-    color: white;
+    background-color: var(--background);
     text-align: center;
     height: 100px;
 }
